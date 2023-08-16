@@ -1,0 +1,11 @@
+{
+    "name": "helen/backend",
+    "autoload": {
+        "psr-4": {
+            "Helen\\Backend\\": "src/",
+            "Database\\":"database", 
+            "App\\":"app"
+        }
+    },
+    "require": {}
+}
