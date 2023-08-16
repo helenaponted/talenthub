@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use Database\PDO\DatabaseConnection;
+use Exception;
 
 class CodersController {
     private $server;

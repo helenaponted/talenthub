@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Helen\\Backend\\' => array($baseDir . '/src'),
+    'Database\\' => array($baseDir . '/database'),
+    'App\\' => array($baseDir . '/app'),
 );
