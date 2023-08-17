@@ -12,7 +12,6 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         'city' => $_POST["city"],
         'id_rol' => $_POST["id_rol"],
         'id_bootcamp' => $_POST["id_bootcamp"],
-        'id_activities' => $_POST["id_activities"]
 
     ];
 
@@ -49,7 +48,6 @@ require_once __DIR__ . '/../../vendor/autoload.php';
             <input type="text" name="city" required>
             <input type="hidden" name="id_rol" value=3>
             <input type="hidden" name="id_bootcamp" value=1>
-            <input type="hidden" name="id_activities" value=1>
             <input type="submit" name="submit" value="SUBMIT">
         </fieldset>
     </form>
