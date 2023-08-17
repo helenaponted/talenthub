@@ -32,7 +32,10 @@ require_once __DIR__ . '/../../vendor/autoload.php';
             <label for="rol">Rol</label>
             <input type="text" name="rol" required>
             <label for="type">Tipo de rol</label>
-            <input type="text" name="type">
+            <select name="type">
+                <option value="STAFF">STAFF</option>
+                <option value="CODER">CODER</option>
+            </select>
             <input type="submit" name="submit" value="SUBMIT">
         </fieldset>
     </form>

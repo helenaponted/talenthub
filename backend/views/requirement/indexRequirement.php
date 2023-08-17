@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roles</title>
+    <title>Requisitos</title>
 </head>
 <body>
-    <h1>Listado de roles</h1>
-    <a href="./addRol.php">
-        <button>Crear nuevo rol</button>
+    <h1>Listado de requisitos</h1>
+    <a href="./addRequirement.php">
+        <button>Crear nuevo requisito</button>
     </a>
     <table>
         <thead>
             <tr>
                 
-                <th>Nombre del Rol</th>
+                <th>Requisito</th>
                 <th>Tipo</th>
                 
             </tr>
@@ -22,23 +22,23 @@
         <tbody>
             <?php 
 
-            use App\Controllers\RolController;
+            use App\Controllers\RequirementController;
             require "./../../vendor/autoload.php";
 
-            $rolList = new RolController;
-            $result = $rolList ->index();
+            $requirementList = new RequirementController;
+            $result = $requirementList ->index();
             foreach ($result as $row){
                 echo "<tr>";
                 
-                echo "<td>" .$row["name_rol"] . "</td>";
+                echo "<td>" .$row["name_requirement"] . "</td>";
                 echo "<td>" .$row["type"] . "</td>";
                 echo "<td>
                 <div>
-                    <a href='editRol.php?id=" . $row["id"] . "'>
+                    <a href='editRequirement.php?id=" . $row["id"] . "'>
                     <button>EDITAR</button>
                     </a>
                     
-                    <a href='deleteRol.php?id=" . $row["id"] . "'>
+                    <a href='deleteRequirement.php?id=" . $row["id"] . "'>
                     <button>BORRAR</button>
                     </a>
                 </div>

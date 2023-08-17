@@ -44,7 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="rol">Rol</label>
             <input type="text" name="name_rol" required value="<?= $newNameRol ?>">
             <label for="type">Tipo de rol</label>
-            <input type="text" name="type" value="<?= $newTypeRol ?>">
+            <select name="type">
+                <option value="STAFF">STAFF</option>
+                <option value="CODER">CODER</option>
+            </select>
             <input type="submit" name="submit" value="ACTUALIZAR ROL">
         </fieldset>
     </form>
