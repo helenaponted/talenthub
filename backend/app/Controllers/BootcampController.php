@@ -3,7 +3,7 @@ namespace App\Controllers;
 use Database\PDO\DatabaseConnection;
 use Exception;
 
-class CodersController {
+class BootcampController {
     private $server;
     private $database;
     private $username;
@@ -21,9 +21,24 @@ class CodersController {
 
     }
     public function store($data){
-        $query= "INSERT INTO coders (name_coder, surname1, surname2, email, phone, city, id_rol, id_bootcamp) VALUES (?, ?, ?, ?, ?, ?, ? ,?)";
+        $query= "INSERT INTO bootcamp (name_bootcamp, start, end, remote) VALUES (?, ?, ?, ?)";
         $stm=$this->connection->get_connection()->prepare($query);
-        $results=$stm->execute([$data['name_coder'],$data['surname1'],$data['surname2'],$data['email'],$data['phone'],$data['city'],$data['id_rol'],$data['id_bootcamp']]);
+        $stm->execute([$data['name_bootcamp'],$data['start'],$data['end'],$data['remote']]);
+    }
+
+ 
+    public function index(){
+        $query = "SELECT * FROM bootcamp";
+        $stm = $this->connection->get_connection()->prepare($query);
+        $stm->execute();
+        return $stm->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function delete($id) {
+        $query = "DELETE FROM bootcamp WHERE id = ?";
+        $stm = $this->connection->get_connection()->prepare($query);
+        
+        $stm->execute();
     }
 
 }
