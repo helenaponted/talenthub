@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <div>
       
       <p><?php echo $message; ?></p>
-      <a href="talenthub/backend/views/coders/getAllCoders.php" >Volver a la lista de roles</a>
+      <a href="getAllCoders.php" >Volver a la lista de roles</a>
     </div>
   </div>
 </body>

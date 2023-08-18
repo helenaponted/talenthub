@@ -49,10 +49,13 @@ class CodersController {
 
     }
 
-    public function update($id, $data){
-        $query= "UPDATE coders SET  name_coder= ?, surname1=? WHERE id =?";
+    // PDO update con array, sin especificar todos los parametros posicionalmente
+    // https://phpdelusions.net/pdo_examples/update
+
+    public function update($data){
+        $query= "UPDATE coders SET name_coder =:name_coder, surname1=:surname1, surname2=:surname2, email=:email, phone=:phone, city=:city WHERE id =:id";
         $stm = $this->connection->get_connection()->prepare($query);
-        $stm -> execute([$data['name_coder'], $data['surname1'], $id]);
+        $stm -> execute($data);
 
     }
 
