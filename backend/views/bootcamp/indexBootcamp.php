@@ -7,7 +7,6 @@
 </head>
 <body>
     <h1>Listado de Bootcamps</h1>
-    <form action="./indexBootcamp.php" method="POST">
     <table>
         <thead>
             <tr>
@@ -16,30 +15,39 @@
                 <th>Empieza</th>
                 <th>Acaba</th>
                 <th>¿Es remoto?</th>
-                
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            
-    <?php
+            <?php
             use App\Controllers\BootcampController;
             require "./../../vendor/autoload.php";
 
-            $rolList = new BootcampController;
-            $result = $rolList ->index();
-            foreach ($result as $row){
+            $bootcampList = new BootcampController;
+            $result = $bootcampList->index();
+            foreach ($result as $row) {
                 echo "<tr>"; 
-                echo "<td>" .$row["id"] . "</td>";
-                echo "<td>" .$row["name_bootcamp"] . "</td>";
-                echo "<td>" .$row["start"] . "</td>";
-                echo "<td>" .$row["end"] . "</td>";
-                echo "<td>" .$row["remote"] . "</td>";
-                
+                echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["name_bootcamp"] . "</td>";
+                echo "<td>" . $row["start"] . "</td>";
+                echo "<td>" . $row["end"] . "</td>";
+                echo "<td>" . $row["remote"] . "</td>";
+                echo "<td>
+                    <form action='editBootcamp.php' method='GET'>
+                        <input type='hidden' name='id' value='" . $row["id"] . "'>
+                        <button type='submit'>Edit</button>
+                    </form>
+                </td>";
+                echo "<td>
+                    <form action='deleteBootcamp.php' method='GET'>
+                        <input type='hidden' name='id' value='" . $row["id"] . "'>
+                        <button type='submit'>Delete</button>
+                    </form>
+                </td>";
                 echo "</tr>";
             }
-   ?>
+            ?>
         </tbody>
     </table>
-    </form>
-
 </body>
+</html>

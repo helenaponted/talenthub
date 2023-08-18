@@ -33,14 +33,35 @@ class BootcampController {
         $stm->execute();
         return $stm->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function show($id){
+        $query = "SELECT * FROM bootcamp WHERE id=:id";
+        $stm= $this->connection -> get_connection()->prepare($query);
+        $stm -> execute([":id" => $id]);
+        $result= $stm ->fetch(\PDO::FETCH_ASSOC);
 
-    public function delete($id) {
-        $query = "DELETE FROM bootcamp WHERE id = ?";
+        return $result;
+    }
+    
+    public function edit($id, $data) {
+        $query = "UPDATE bootcamp SET name_bootcamp=?,start=?,end=?,remote=? WHERE id=?";
         $stm = $this->connection->get_connection()->prepare($query);
+        return $stm->execute([
+            $data['name_bootcamp'],
+            $data['start'],
+            $data['end'],
+            $data['remote'],
+            $id
+        ]);
         
-        $stm->execute();
     }
 
+    public function delete($id) {
+        $query = "DELETE FROM bootcamp WHERE id = :id";
+        $stm = $this->connection->get_connection()->prepare($query);
+        $stm->bindParam(':id', $id, \PDO::PARAM_INT);
+        return $stm->execute($id);
+    }
+   
 }
 
 

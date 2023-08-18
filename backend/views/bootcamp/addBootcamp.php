@@ -37,8 +37,12 @@ require_once __DIR__ . './../../vendor/autoload.php';
             <input type="date" name="end" required>
             <label for="remote">Remote</label>
             <input type="text" name="remote" value=0>
-
             <input type="submit" name="submit" value="SUBMIT">
         </fieldset>
     </form>
+    <a href="./indexBootcamp.php">
+    <button>
+        Ver Bootcamps
+    </button>
+    </a>
 </body>
