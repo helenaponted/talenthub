@@ -2,7 +2,7 @@
 use App\Controllers\CodersController;
 require_once __DIR__ . '/../../vendor/autoload.php';
 
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $data = [
         'name_coder' => $_POST["name"],
         'surname1' => $_POST["surname1"],
@@ -10,9 +10,8 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         'email' => $_POST["email"],
         'phone' => $_POST["phone"],
         'city' => $_POST["city"],
-        'id_rol' => $_POST["id_rol"],
         'id_bootcamp' => $_POST["id_bootcamp"],
-        'id_activities' => $_POST["id_activities"]
+        'id_rol' => $_POST["id_rol"]
 
     ];
 
@@ -47,10 +46,8 @@ require_once __DIR__ . '/../../vendor/autoload.php';
             <input type="text" name="phone" required>
             <label for="city">City</label>
             <input type="text" name="city" required>
-            <input type="hidden" name="id_rol" value=3>
             <input type="hidden" name="id_bootcamp" value=1>
-            <input type="hidden" name="id_activities" value=1>
+            <input type="hidden" name="id_rol" value=3>
             <input type="submit" name="submit" value="SUBMIT">
         </fieldset>
     </form>
-</body>
