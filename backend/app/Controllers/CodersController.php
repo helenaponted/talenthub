@@ -26,7 +26,7 @@ class CodersController {
     public function store($data){
         $query= "INSERT INTO coders (name_coder, surname1, surname2, email, phone, city, id_rol, id_bootcamp) VALUES (?, ?, ?, ?, ?, ?, ? ,?)";
         $stm=$this->connection->get_connection()->prepare($query);
-        $results=$stm->execute([$data['name_coder'],$data['surname1'],$data['surname2'],$data['email'],$data['phone'],$data['city'],$data['id_rol'],$data['id_bootcamp'],$data['id_activities']]);
+        $results=$stm->execute([$data['name_coder'],$data['surname1'],$data['surname2'],$data['email'],$data['phone'],$data['city'],$data['id_rol'],$data['id_bootcamp']]);
     }
 
     // PDO update con array, sin especificar todos los parametros posicionalmente
