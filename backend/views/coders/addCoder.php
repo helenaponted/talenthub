@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         'city' => $_POST["city"],
         'id_rol' => $_POST["id_rol"],
         'id_bootcamp' => $_POST["id_bootcamp"],
-        
+
     ];
 
     $coder = new CodersController;
