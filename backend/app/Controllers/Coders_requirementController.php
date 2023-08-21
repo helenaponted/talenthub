@@ -26,7 +26,7 @@ class Coders_requirementController
 
     public function index()
     {
-        $query = "SELECT c.id, c.name_coder, r.id_requirement, r.name_requirement, cr.date
+        $query = "SELECT c.id, c.name_coder, r.id_requirement, r.name_requirement, cr.date, cr.state
         FROM requirement AS r
         LEFT JOIN coders_requirement AS cr ON r.id_requirement = cr.id_requirement 
         LEFT JOIN coders AS c ON c.id = cr.id_coder 
@@ -48,11 +48,11 @@ class Coders_requirementController
 {
     $query = "SELECT c.id, c.name_coder, c.surname1, c.surname2,
                     r.id_requirement, r.name_requirement,
-                    cr.id_coder, cr.id_requirement,  cr.date
-              FROM coders AS c
-              LEFT JOIN coders_requirement AS cr ON c.id = cr.id_coder
-              LEFT JOIN requirement AS r ON cr.id_requirement = r.id_requirement
-              WHERE c.id = :id_coder OR r.id_requirement = :id_requirement";
+                    cr.id_coder, cr.id_requirement,  cr.date, cr.state
+            FROM coders AS c
+            LEFT JOIN coders_requirement AS cr ON c.id = cr.id_coder
+            LEFT JOIN requirement AS r ON cr.id_requirement = r.id_requirement
+            WHERE c.id = :id_coder OR r.id_requirement = :id_requirement";
     $stm = $this->connection->get_connection()->prepare($query);
     $stm->execute([":id_coder" => $id_coder, ":id_requirement" => $id_requirement]);
     return $stm->fetchAll(\PDO::FETCH_ASSOC);
@@ -60,7 +60,7 @@ class Coders_requirementController
 public function update($id_coder, $id_requirement, $data)
     {
         $query = "UPDATE coders_requirement
-        SET date=? WHERE id_coder =? AND id_requirement=?";
+        SET date=? state=? WHERE id_coder =? AND id_requirement=?";
         $stm = $this->connection->get_connection()->prepare($query);
         $stm->execute([$data['date'], $id_coder, $id_requirement]);
     }

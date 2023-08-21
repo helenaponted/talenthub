@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <h1>Coder</h1>
     <form action="./addCoder.php" method="POST">
         <fieldset>
-            <legend>Coders</legend>
+        <legend>Coders</legend>
             <label for="name">Name</label>
             <input type="text" name="name" required>
             <label for="surname1">Surname</label>
@@ -46,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <input type="text" name="phone" required>
             <label for="city">City</label>
             <input type="text" name="city" required>
+            <input type="hidden" name="id_rol" value=3>
             <input type="hidden" name="id_bootcamp" value=1>
             <input type="submit" name="submit" value="SUBMIT">
         </fieldset>

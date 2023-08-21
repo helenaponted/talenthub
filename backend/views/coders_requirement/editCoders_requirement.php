@@ -1,3 +1,45 @@
+<?php
+// use App\Controllers\Coders_requirementController;
+// require_once __DIR__ . '/../../vendor/autoload.php';
+
+// $coders_requirementController = new Coders_requirementController;
+
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+//     echo 'Cambio realizado con éxito';
+
+//     $IdNewRequirement = $_POST["id_requirement"];
+//     $newNameRequirement = $_POST['name_requirement'];
+//     $date = $_POST['date'];
+
+//     $data = [
+//         'id_requeriment'=> $IdNewRequirement,
+//         'name_requirement' => $newNameRequirement,
+//         'date' => $date
+//     ];
+
+//     echo '<pre>'; print_r($data); echo '</pre>';
+
+//     foreach ($data as $value) {
+//         echo gettype($value), "\n";
+//     }
+
+//     $coders_requirementController->update($data);
+
+//     header("Location: showCoders_requirement.php");
+//     exit();
+// } else {
+//     $id = $_GET["id_requirement"];
+
+//     $coders_requirementModification = $coders_requirementController->show($id_coder, $id_requirement);
+
+//     $IdNewRequirement = $coders_requirementModification['id_requirement'];
+//     $newNameRequirement = $coders_requirementModification['name_requirement'];
+
+// }
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,34 +58,34 @@
     $results = $coders_requeriment->show($id_coder, $id_requirement);
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $newDate = $_POST["new_date"];
-        // Aquí llama al método en el controlador para actualizar la fecha
-        // $coders_requeriment->updateFecha($id_coder, $id_requirement, $newDate);
-        // Luego, podrías mostrar un mensaje de confirmación o redireccionar
+        $IdNewRequirement = $_POST["id_requirement"];
+        $newNameRequirement = $_POST['name_requirement'];
+        $date = $_POST['date'];
     }
     ?>
 
     <h2>Editar Requerimientos Coder</h2>
     <table>
-        <!-- Mostrar los detalles actuales del coder y el requerimiento aquí -->
         <?php foreach ($results as $row): ?>
-            <tr>
-                <td><?= $row['coder_id'] ?></td>
-                <td><?= $row['name_coder'] ?></td>
-                <td><?= $row['surname1'] ?></td>
-                <td><?= $row['surname2'] ?></td>
+            echo "<tr>
                 <td><?= $row['requirement_id'] ?></td>
                 <td><?= $row['name_requirement'] ?></td>
                 <td><?= $row['date'] ?></td>
-            </tr>
+            </tr>"
         <?php endforeach; ?>
         
     </table>
 
     <!-- Formulario para editar la fecha de entrega -->
-    <form method="post">
-        <label for="new_date">Nueva Fecha de Entrega:</label>
-        <input type="date" id="new_date" name="new_date" required>
+    <form action=".editCoders_requirement.php" method="post">
+    <label for="dog-names">Estado del Requerimiento:</label>
+        <select name="dog-names" id="dog-names scope="col">
+        <option value="delivered">Entregado</option>
+        <option value="undelivered">No entregado</option>
+        </select>
+    <label for="new_date">Fecha de entrega:</label>
+    <input type="date" id="new_date" name="new_date" required>
+        <br>
         <button type="submit">Actualizar Fecha</button>
     </form>
 </body>
