@@ -24,7 +24,7 @@
             require "./../../vendor/autoload.php";
 
             $id_coder = isset($_GET["id_coder"]) ? $_GET["id_coder"] : null;
-            $id_requirement = isset($_GET["id_requirement"]) ? $_GET["id_requirement"] : null;
+            $id_requirement = isset($_GET["id_requirement"]) ? $GET["id_requirement"] : null;
             $coders_requeriment = new Coders_requirementController;
             $results = $coders_requeriment->show($id_coder, $id_requirement);
 
@@ -34,11 +34,12 @@
                 echo "<td>" . $row['name_coder'] . "</td>";
                 echo "<td>" . $row['surname1'] . "</td>";
                 echo "<td>" . $row['surname2'] . "</td>";
-                echo "<td>" . $row['id'] ."</td>";
-                echo "<td>" . $row['name_requirement'] . "</td>";
+                echo "<td>" . $row['id_requirement'] . "</td>";
+                echo "<td>" . ($row['name_requirement'] ?? '') . "</td>";
                 echo "<td>" . $row['date'] . "</td>";
                 echo "</tr>";
             }
+
             ?>
         </tbody>
     </table>

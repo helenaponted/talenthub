@@ -29,6 +29,26 @@ class CodersController {
         $results=$stm->execute([$data['name_coder'],$data['surname1'],$data['surname2'],$data['email'],$data['phone'],$data['city'],$data['id_rol'],$data['id_bootcamp']]);
     }
 
+    public function getAll()
+    {
+        $query = "SELECT * FROM coders";
+        $stm = $this->connection->get_connection()->prepare($query);
+        $stm->execute();
+        return $stm->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function show($id){
+        $query = "SELECT * FROM coders WHERE id=:id";
+        $stm= $this->connection -> get_connection()->prepare($query);
+        $stm -> execute([":id" => $id]);
+        $result= $stm ->fetch(\PDO::FETCH_ASSOC);
+
+        return $result;
+
+        
+
+    }
+
     // PDO update con array, sin especificar todos los parametros posicionalmente
     // https://phpdelusions.net/pdo_examples/update
 
