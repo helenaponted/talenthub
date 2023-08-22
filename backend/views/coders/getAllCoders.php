@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="getAllCoders.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <title>CODERS</title>
 </head>
 <body>
-    <h1 style>Listado de Coders</h1>
+<div class="button-coders">
+    <h1>Listado de Coders</h1>
     <a href="./addCoder.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear nuevo coder</button>
     </a>
-
-    <div class="relative overflow-x-auto">
+</div>
+    <div id="table" class="relative overflow-x-auto">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -77,5 +79,6 @@
             ?>
         </tbody>
     </table>
+    
 </body>
 </html>
