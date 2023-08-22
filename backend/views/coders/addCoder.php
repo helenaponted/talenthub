@@ -16,6 +16,8 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
     $coder = new CodersController;
     $coder->store($data);
+    header("Location: getAllCoders.php");
+    exit();
 }
 
 ?>

@@ -1,0 +1,33 @@
+/* media-queries */
+@media (max-width: 768px) {
+    .w-56 {
+      width: 15%;
+    }
+  
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: auto;
+      background-color: transparent;
+    }
+  
+    .logo img {
+      max-width: 80%;
+    }
+  
+    .config {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .responsive-hidden span {
+      display: none;
+    }
+  
+    .has-submenu .sub-menu {
+      display: none;
+    }
+  
+   
+  }
