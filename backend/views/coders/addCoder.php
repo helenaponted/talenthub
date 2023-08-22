@@ -16,6 +16,8 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
     $coder = new CodersController;
     $coder->store($data);
+    header("Location: getAllCoders.php");
+    exit();
 }
 
 ?>
@@ -31,6 +33,8 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 </head>
 
 <body class="bg-primary flex">
+
+    
 
        <main class="ml-56 flex-grow bg-primary p-8 rounded-lg -md flex items-center justify-center">
         <div class="w-96 bg-white p-8 rounded-lg">

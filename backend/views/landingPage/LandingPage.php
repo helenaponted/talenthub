@@ -9,28 +9,28 @@
     <title>Talenthub</title>
   </head>
   <body>
-  <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5" style="background-image: url(./../public/coders.jpg)">
+  <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5" style="background-image: url(./../../../public/coders.jpg)">
        <div class="md:w-1/2">
         
         <p class="text-3xl font-bold">CODERS</p>
         <p class="text-2xl mb-10 leading-none">Gestión de Coders</p>
-        <a href="#" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
+        <a href="http://localhost/talenthub/backend/views/coders/getAllCoders.php" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
         </div>
     </div>
 </br>
-    <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5" style="background-image: url(./../public/coding2.webp)">
+    <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5" style="background-image: url(./../../../public/coding2.webp)">
        <div class="md:w-1/2">
         <p class="text-3xl font-bold">BOOTCAMPS</p>
         <p class="text-2xl mb-10 leading-none">Gestión de Bootcamps</p>
-        <a href="#" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
+        <a href="http://localhost/talenthub/backend/views/landingPage/LandingPageBootcamp.php" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
         </div>
     </div>
 </br>
-<div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5" style="background-image: url(./../public/staff.jpg)">
+<div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5" style="background-image: url(./../../../public/staff.jpg)">
        <div class="md:w-1/2">
         <p class="text-3xl font-bold">STAFF</p>
         <p class="text-2xl mb-10 leading-none">Gestión de Staff</p>
-        <a href="#" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
+        <a href="http://localhost/talenthub/backend/views/staff/indexStaff.php" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
         </div>
     </div>
 
@@ -40,7 +40,7 @@
     <div class="container px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#">
-                <img class="w-auto h-7" src="./../public/LogoF5Footer.png" alt="">
+                <img class="w-auto h-7" src="./../../../public/LogoF5Footer.png" alt="">
             </a>
             <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">TalentHub</p>
             
