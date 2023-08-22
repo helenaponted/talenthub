@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./../coders/addCoder.css">
     <link rel="stylesheet" href="./../../styles.css">
 </head>
-<body class="fondo">
+<body>
 <div class="w-full relative flex ct-docs-disable-sidebar-content overflow-x-hidden">
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
     <div class="logo flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
