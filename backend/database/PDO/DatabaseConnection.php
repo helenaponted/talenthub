@@ -24,17 +24,12 @@ class DatabaseConnection {
 
         } catch(\PDOException $e) {
             echo "problemas con la conexion" .$e->getMessage();
-            
         }
     }
     public function get_connection() {
         return $this->connection;
     }
 } 
-
-
-
-
 
 
 
