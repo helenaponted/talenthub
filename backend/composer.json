@@ -3,8 +3,8 @@
     "autoload": {
         "psr-4": {
             "Helen\\Backend\\": "src/",
-            "Database\\":"database", 
-            "App\\":"app"
+            "Database\\":"database/", 
+            "App\\":"app/"
         }
     },
     "require": {}

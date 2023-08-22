@@ -11,12 +11,28 @@ class ComposerStaticInit083388a669552e14318ea2f368363eb3
         array (
             'Helen\\Backend\\' => 14,
         ),
+        'D' => 
+        array (
+            'Database\\' => 9,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Helen\\Backend\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
