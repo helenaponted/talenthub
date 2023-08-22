@@ -8,3 +8,39 @@
 .logo{
     background-color: #FF4700;
 }
+
+.sub-menu {
+    display: none;
+    top: 0;
+            left: 100%;
+            width: 200px;
+    background-color: #fff;
+            border-left: 2px solid #FF4700;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            font-size: 0.9rem;
+}
+.group:hover .sub-menu,
+.group.active .sub-menu {
+    display: block;
+}
+
+.sub-menu li a {
+    display: block;
+    padding: 8px 12px;
+    color: #374151;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.sub-menu li a:hover {
+    background-color: #f3f4f6;
+    color: #FF4700;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+  

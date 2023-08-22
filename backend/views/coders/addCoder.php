@@ -33,39 +33,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 <body class="bg-primary flex">
 
-    <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden">
-        <div class="logo flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
-            <img src="./../../../src/assets/logo-color.svg" />
-        </div>
-        <ul class="py-4">
-            <li>
-                <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 px-4">
-                    <i class='bx bx-home text-lg text-gray-400'></i>
-                    <span class="text-sm font-medium">Inicio</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 px-4">
-                    <i class='bx bx-music text-lg text-gray-400'></i>
-                    <span class="text-sm font-medium">Bootcamps</span>
-                </a>
-            </li> 
-            <li>
-                <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 px-4">
-                    <i class='bx bx-music text-lg text-gray-400'></i>
-                    <span class="text-sm font-medium">Todos los coders</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 px-4">
-                    <i class='bx bx-music text-lg text-gray-400'></i>
-                    <span class="text-sm font-medium">Coders en reserva</span>
-                </a>
-            </li>  
-            
-            <!-- Agrega otros elementos del menú aquí -->
-        </ul>
-    </aside>
+    
 
        <main class="ml-56 flex-grow bg-primary p-8 rounded-lg -md flex items-center justify-center">
         <div class="w-96 bg-white p-8 rounded-lg">
