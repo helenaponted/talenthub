@@ -97,7 +97,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
   <main class="ml-56 p-8">
     <h1>Contenido Principal</h1>
-    <!-- Aquí puedes agregar el contenido de tu página -->
+    
   </main>
 
 </body>
