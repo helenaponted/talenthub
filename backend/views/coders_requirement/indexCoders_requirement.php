@@ -14,6 +14,7 @@
                 <th>Nombre coder</th>
                 <th>Id requerimiento</th>
                 <th>Nombre requerimiento</th>
+                <th>Estado</th>
                 <th>Fecha</th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@
                 echo "<td>" . $row['name_coder'] . "</td>";
                 echo "<td>" . $row['id_requirement'] . "</td>";
                 echo "<td>" . $row['name_requirement'] . "</td>";
+                echo "<td>" . $row['state'] . "</td>";
                 echo "<td>" . $row['date'] . "</td>";
                 echo "<td>
             

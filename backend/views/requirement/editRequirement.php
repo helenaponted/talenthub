@@ -3,7 +3,7 @@ use App\Controllers\RequirementController;
 require_once __DIR__ . '/../../vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST["id"];
+    $id = $_POST["id_requirement"];
     $newNameRequirement = $_POST['name_requirement'];
     $newTypeRequirement = $_POST['type'];
 

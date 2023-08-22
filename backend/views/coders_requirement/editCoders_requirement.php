@@ -1,92 +1,94 @@
 <?php
-// use App\Controllers\Coders_requirementController;
-// require_once __DIR__ . '/../../vendor/autoload.php';
 
-// $coders_requirementController = new Coders_requirementController;
+use App\Controllers\Coders_requirementController;
+require "./../../vendor/autoload.php";
 
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$id_coder = $_GET['id_coder'];
 
-//     echo 'Cambio realizado con éxito';
+$editCoders_requirement = new Coders_requirementController;
+$results = $editCoders_requirement->edit($id_coder);
 
-//     $IdNewRequirement = $_POST["id_requirement"];
-//     $newNameRequirement = $_POST['name_requirement'];
-//     $date = $_POST['date'];
+$requirement = $results['requirement'];
+$coder = $results['coder'];
 
-//     $data = [
-//         'id_requeriment'=> $IdNewRequirement,
-//         'name_requirement' => $newNameRequirement,
-//         'date' => $date
-//     ];
 
-//     echo '<pre>'; print_r($data); echo '</pre>';
+$required_fields = ["name_requirement", "state", "date"];
+$requirements_filtered = array_column($requirement, 'name_requirement');
 
-//     foreach ($data as $value) {
-//         echo gettype($value), "\n";
-//     }
-
-//     $coders_requirementController->update($data);
-
-//     header("Location: showCoders_requirement.php");
-//     exit();
-// } else {
-//     $id = $_GET["id_requirement"];
-
-//     $coders_requirementModification = $coders_requirementController->show($id_coder, $id_requirement);
-
-//     $IdNewRequirement = $coders_requirementModification['id_requirement'];
-//     $newNameRequirement = $coders_requirementModification['name_requirement'];
-
-// }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Requerimientos Coder</title>
+    <title>Editar requisitos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <?php
-    use App\Controllers\Coders_requirementController;
-    require "./../../vendor/autoload.php";
+    <form action="editCoders_requirement.php" method="post">
+        <input type="hidden" name="id" value="<?php echo $id_coder; ?>">
+        <div class="row">
+    <div class="col">
+        <label for="name_coder">Nombre</label>
+        <input type="text" name="name_coder" id="name_coder" value="<?php echo isset($coder['name_coder']) ? $coder['name_coder'] : ''; ?>" readonly>
+    </div>
+    <div class="col">
+        <label for="surname1">Apellido 1</label>
+        <input type="text" name="surname1" id="surname1" value="<?php echo isset($coder['surname1']) ? $coder['surname1'] : ''; ?>" readonly>
+    </div>
+    <div class="col">
+        <label for="surname2">Apellido 2</label>
+        <input type="text" name="surname2" id="surname2" value="<?php echo isset($coder['surname2']) ? $coder['surname2'] : ''; ?>" readonly>
+    </div>
+</div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <h3>Editar requisitos</h3>
+    
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Requerimiento</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+        foreach ($requirements_filtered as $requirement) {
+            echo "<tr>";
+            echo "<td>" . $requirement . "</td>";
+            echo '<td>';
+            echo '<select name="state[]" class="state-select">';
+            echo '<option value="no entregado">No Entregado</option>';
+            echo '<option value="entregado">Entregado</option>';
+            echo '</select>';
+            echo '</td>';
+            echo '<td>';
+            echo '<input type="date" name="date[]" class="date-input">';
+            echo '</td>';
+            echo "</tr>";
+        }
+                        
+                        
+                        ?>
+    
 
-    $id_coder = isset($_GET["id_coder"]) ? $_GET["id_coder"] : null;
-    $id_requirement = isset($_GET["id_requirement"]) ? $_GET["id_requirement"] : null;
-    $coders_requeriment = new Coders_requirementController;
-    $results = $coders_requeriment->show($id_coder, $id_requirement);
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div class="mt-4 flex justify-center">
 
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $IdNewRequirement = $_POST["id_requirement"];
-        $newNameRequirement = $_POST['name_requirement'];
-        $date = $_POST['date'];
-    }
-    ?>
-
-    <h2>Editar Requerimientos Coder</h2>
-    <table>
-        <?php foreach ($results as $row): ?>
-            echo "<tr>
-                <td><?= $row['requirement_id'] ?></td>
-                <td><?= $row['name_requirement'] ?></td>
-                <td><?= $row['date'] ?></td>
-            </tr>"
-        <?php endforeach; ?>
-        
-    </table>
-
-    <!-- Formulario para editar la fecha de entrega -->
-    <form action=".editCoders_requirement.php" method="post">
-    <label for="dog-names">Estado del Requerimiento:</label>
-        <select name="dog-names" id="dog-names scope="col">
-        <option value="delivered">Entregado</option>
-        <option value="undelivered">No entregado</option>
-        </select>
-    <label for="new_date">Fecha de entrega:</label>
-    <input type="date" id="new_date" name="new_date" required>
-        <br>
-        <button type="submit">Actualizar Fecha</button>
+        <a href="showCoders_requirement.php?id_coder=<?php echo $id_coder; ?>">
+                <button type="button" class="...">REGRESAR</button>
+            </a>
+            <button type="submit">Guardar</button>
+        </div>
     </form>
 </body>
+
 </html>

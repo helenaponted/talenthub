@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <title>Requerimientos Coder</title>
+
 </head>
 <body>
 <div class="relative overflow-x-auto">
@@ -28,6 +29,7 @@
             $id_requirement = isset($_GET["id_requirement"]) ? $_GET["id_requirement"] : null;
             $coders_requeriment = new Coders_requirementController;
             $results = $coders_requeriment->show($id_coder, $id_requirement);
+            
 
             foreach ($results as $row) {
                 echo "<tr>";
@@ -38,15 +40,14 @@
                 echo "<td>" . ($row['name_requirement'] ?? '') . "</td>";
                 echo "<td>" . $row['state'] . "</td>";
                 echo "<td>" . $row['date'] . "</td>";
-        
+
             }
 
             ?>
             
         </tbody>
-    </table>
-    <br><br>
-    <?php
+        </table>
+        <?php
     echo "<tr>";
     echo "<td>
                 
@@ -71,6 +72,8 @@
                 
                 echo "</tr>";
                 ?>
+
+
         
 </body>
 </html>
