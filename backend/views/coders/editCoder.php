@@ -14,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newEmail = $_POST['email'];
     $newPhone = $_POST['phone'];
     $newCity = $_POST['city'];
+    $newBootcamp = $_POST["id_bootcamp"];
+    $newRol = $_POST['id_rol'];
 
     $data = [
         'id'=> $id,
@@ -22,7 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'surname2' => $newSurname2,
         'email' => $newEmail,
         'phone'=> $newPhone,
-        'city'=> $newCity
+        'city'=> $newCity, 
+        'id_bootcamp'=>$newBootcamp,
+        'id_rol' => $newRol,
+        
+        
     ];
 
     echo '<pre>'; print_r($data); echo '</pre>';
@@ -31,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo gettype($value), "\n";
     }
 
-    $codersController->update($data);
+    $codersController->update($data, $id);
 
     header("Location: getAllCoders.php");
     exit();
@@ -51,6 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newEmail = $coderData['email'];
     $newPhone = $coderData['phone'];
     $newCity = $coderData['city'];
+    $newBootcamp = $coderData['id_bootcamp'];
+    $newRol = $coderData['id_rol'];
     
 
 }
@@ -84,6 +92,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input class="w-full border rounded-lg py-2 px-3 mb-2" type="text" name="phone" placeholder="" value="<?= $newPhone ?>">
             <label class="block mb-2" for="city">Ciudad</label>
             <input class="w-full border rounded-lg py-2 px-3 mb-2" type="text" name="city" placeholder="" value="<?= $newCity ?>">
+            <select name="id_bootcamp">
+            <option value="">-- ASIGNAR BOOTCAMP --</option>
+                <option value=2>FEMCODERS NORTE</option>
+                <option value=3>DIGITAL ACADEMY</option>
+                <option value=4>UNIQUE</option>
+                <option value=5>RURAL CAMP</option>                
+            </select>
+            <select name="id_rol">
+            <option value="">-- ASIGNAR ESTADO --</option>
+                <option value=3>ASPIRANTE</option>
+                <option value=4>CODER</option>
+                <option value=5>EN RESERVA</option>
+                <option value=6>EXCODER</option>
+                <option value=7>EXCLUIDO</option>
+
+            </select>
             <input class="bg-secondary text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300 ease-in-out" type="submit" name="submit" value="ACTUALIZAR CODER">
         </fieldset>
 </div>
