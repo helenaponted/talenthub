@@ -3,8 +3,7 @@
 use App\Controllers\Coders_requirementController;
 require "./../../vendor/autoload.php";
 
-$id_coder = $_GET['id_coder'];
-
+$id_coder = $_GET['id'];
 $editCoders_requirement = new Coders_requirementController;
 $results = $editCoders_requirement->edit($id_coder);
 

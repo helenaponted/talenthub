@@ -69,6 +69,7 @@ public function update($id_coder, $id_requirement, $data)
 }
 public function edit($id_coder)
 {
+    $id_coder = $_GET['id'];
     $query = "SELECT c.id, c.name_coder, c.surname1, c.surname2,
         r.id_requirement, r.name_requirement, cr.state, cr.date
     FROM coders c

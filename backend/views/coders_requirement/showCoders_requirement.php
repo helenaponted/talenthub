@@ -47,6 +47,7 @@
             
         </tbody>
         </table>
+        <br><br>
         <?php
     echo "<tr>";
     echo "<td>
