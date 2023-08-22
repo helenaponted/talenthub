@@ -11,7 +11,6 @@
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <th scope="col" class="px-6 py-3">Id coder</th>
                 <th scope="col" class="px-6 py-3">Nombre</th>
                 <th scope="col" class="px-6 py-3">Primer apellido</th>
                 <th scope="col" class="px-6 py-3">Segundo apellido</th>
@@ -33,7 +32,6 @@
 
             foreach ($results as $row) {
                 echo "<tr>";
-                echo "<td>" . $row['id'] . "</td>";
                 echo "<td>" . $row['name_coder'] . "</td>";
                 echo "<td>" . $row['surname1'] . "</td>";
                 echo "<td>" . $row['surname2'] . "</td>";
