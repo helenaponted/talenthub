@@ -45,35 +45,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./editStaff.css">
     <title>Editar staff</title>
 </head>
-<body>
-    <h1>Editar staff</h1>
+<body class="grid h-screen place-items-center fondo">
+<div class="bg-white p-8 rounded-lg shadow-md w-96 justify-center">
+    <h2 class="text-2xl font-semibold mb-4 text-secondary titulo">Editar staff</h2>
     <form action="editStaff.php" method="POST">
         <fieldset>
-            <legend>Edición de Staff</legend>
             <input type="hidden" name="id" value="<?= $id ?>">
             <label for="rol">Nombre</label>
-            <input type="text" name="name_staff"  value="<?= $newNameStaff ?>">
+            <input type="text" name="name_staff"  value="<?= $newNameStaff ?>" class="w-full border rounded-lg py-2 px-3 mb-2">
             <label for="surname1">Apellido 1</label>
-            <input type="text" name="surname1" value="<?= $newSurname1 ?>">
+            <input type="text" name="surname1" value="<?= $newSurname1 ?>"class="w-full border rounded-lg py-2 px-3 mb-2">
             <label for="surname2">Apellido 2</label>
-            <input type="text" name="surname2" value="<?= $newSurname2 ?>">
+            <input type="text" name="surname2" value="<?= $newSurname2 ?>"class="w-full border rounded-lg py-2 px-3 mb-2">
             <label for="email">Email</label>
-            <input type="email" name="email" value="<?= $newEmail ?>">
+            <input type="email" name="email" value="<?= $newEmail ?>"class="w-full border rounded-lg py-2 px-3 mb-2">
             <label for="rol"></label>
             <input type="hidden" name="id_rol" value="<?= $newId_rol ?>">
             <label for="rol"></label>
             <input type="hidden" name="id_bootcamp" value="<?= $newId_bootcamp ?>">
-            <input type="submit" name="submit" value="Actualizar">
+            <input type="submit" name="submit" value="Actualizar" class="bg-secondary text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300 ease-in-out mt-2">
             
         </fieldset>
     </form>
-    <a href="./indexStaff.php">
-        <button>
-            Lista Staff
-        </button>
-    </a>
+    <a href="/talenthub/backend/views/staff/indexStaff.php" class="mt-2 subtitulo">Lista Staff</a>
+</div>
 </body>
 </html>
 

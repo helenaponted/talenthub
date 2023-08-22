@@ -25,28 +25,35 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./addStaff.css">
     <title>Talenthub</title>
 </head>
-<body>
-<body>
-    <h2>Staff</h2>
+
+<body class="grid h-screen place-items-center fondo">
+
+<div class="bg-white p-8 rounded-lg shadow-md w-96 justify-center">
+    <h2 class="text-2xl font-semibold mb-4 text-secondary titulo">Nuestro Staff</h2>
     <form action="./addStaff.php" method="POST">
         <fieldset>
-            <legend>Staff</legend>
-            <label for="name">Name</label>
-            <input type="text" name="name" required>
-            <label for="surname1">Surname</label>
-            <input type="text" name="surname1" required>
-            <label for="surname2">Surname</label>
-            <input type="text" name="surname2" required>
-            <label for="email">Email</label>
-            <input type="text" name="email" required>
+            
+            <label class="block mb-2" for="name">Nombre</label>
+            <input type="text" name="name" required class="w-full border rounded-lg py-2 px-3 mb-2">
+            <label class="block mb-2" for="surname1">Apellido 1</label>
+            <input type="text" name="surname1" required class="w-full border rounded-lg py-2 px-3 mb-2">
+            <label class="block mb-2" for="surname2">Apellido 2</label>
+            <input type="text" name="surname2" required class="w-full border rounded-lg py-2 px-3 mb-2">
+            <label class="block mb-2" for="email">Email</label>
+            <input type="text" name="email" required class="w-full border rounded-lg py-2 px-3 mb-2">
             <input type="hidden" name="id_rol" value=2>
             <input type="hidden" name="id_bootcamp" value=1>
-            <input type="submit" name="submit" value="SUBMIT">
+            <div class="flex justify-center">
+                    <button type="submit" name="submit" class="bg-secondary text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300 ease-in-out mt-2">SUBMIT</button>
+                </div>
         </fieldset>
     </form>
-    <a href="/talenthub/backend/views/staff/indexStaff.php" >Volver a la lista</a>
+    <a href="/talenthub/backend/views/staff/indexStaff.php" class="mt-2 subtitulo" >Volver a la lista</a>
+</div>
 </body>
 
 <?php
