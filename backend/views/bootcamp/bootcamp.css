@@ -1,0 +1,14 @@
+.fondo{
+    background-color: #FFA37F;
+}
+.bg-secondary {
+    background-color: #FF4700;
+}
+.titulito{
+    font-size: 100px;
+}
+.subtitulo{
+    color:#FF4700;
+    text-decoration: underline;
+    font-size: 12px;
+}

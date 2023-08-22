@@ -12,7 +12,6 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         'city' => $_POST["city"],
         'id_rol' => $_POST["id_rol"],
         'id_bootcamp' => $_POST["id_bootcamp"],
-
     ];
 
     $coder = new CodersController;
@@ -70,4 +69,3 @@ require_once __DIR__ . '/../../vendor/autoload.php';
     </main>
 
 </body>
-</html>
