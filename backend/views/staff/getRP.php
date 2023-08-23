@@ -1,9 +1,12 @@
 <?php
+use App\Controllers\StaffController;
+require "./../../vendor/autoload.php";
+ 
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["action"]) && $_GET["action"] === "list") {
         $staff = new StaffController;
-        $Staffs = $staff->getAll();
+        $Staffs = $staff->show($id);
         
     }
 
@@ -99,8 +102,8 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
            
         </tr>
        <?php 
-       use App\Controllers\StaffController;
-       require "./../../vendor/autoload.php";
+      //  use App\Controllers\StaffController;
+      //  require "./../../vendor/autoload.php";
        
         $staffList = new StaffController;
         $bootcampMap = [
