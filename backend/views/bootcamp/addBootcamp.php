@@ -1,6 +1,7 @@
 <?php
 use App\Controllers\BootcampController;
-require_once __DIR__ . './../../vendor/autoload.php';
+//require_once __DIR__ . './../../vendor/autoload.php';
+require './../../vendor/autoload.php';
 
  if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $data = [
@@ -95,7 +96,7 @@ require_once __DIR__ . './../../vendor/autoload.php';
   </aside>
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
     <h2 class="text-2xl font-semibold mb-4">Alta de nuevo Bootcamp</h2>
-        <form action="./rpaddCoder.php" method="POST">
+        <form action="./addBootcamp.php" method="POST">
             <label for="name" class="block font-semibold">Nombre</label>
             <input type="text" name="name" class="form-input" required>
 

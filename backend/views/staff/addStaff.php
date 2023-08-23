@@ -97,28 +97,32 @@ require_once __DIR__ . '/../../vendor/autoload.php';
     </div>
   </aside>
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
-    <h2 class="text-2xl font-semibold mb-4">Alta de nuevo Bootcamp</h2>
-        <form action="./rpaddCoder.php" method="POST">
+    <h2 class="text-2xl font-semibold mb-4">Alta de nuevo miembro de Staff</h2>
+        <form action="./addStaff.php" method="POST">
             <label for="name" class="block font-semibold">Nombre</label>
             <input type="text" name="name" class="form-input" required>
 
-            <label for="start" class="block font-semibold">Empieza</label>
-            <input type="date" name="start" class="form-input" required>
+            <label for="surname1" class="block font-semibold">Apellido 1</label>
+            <input type="text" name="surname1" class="form-input" required>
 
-            <label for="end" class="block font-semibold">Acaba</label>
-            <input type="date" name="end" class="form-input" required>
+            <label for="surname2" class="block font-semibold">Apellido 2</label>
+            <input type="text" name="surname2" class="form-input" required>
 
-            <label for="remote" class="block font-semibold">¿Es Remoto?</label>
-            <select name="remote" class="form-select">
-                <option value="">-- Selecciona un Bootcamp --</option>
-                <option value=1>SIN DEFINIR</option>
-                <option value=2>REMOTO</option>
-                <option value=3>PRESENCIAL</option>           
+            <label for="email" class="block font-semibold">Email</label>
+            <input type="text" name="email" class="form-input" required>
+
+            <label for="id_staff" class="block font-semibold"></label>
+            <select name="id_staff" class="form-select">
+                <option value="">-- Id Formador/a --</option>
+                <option value=0>sin definir</option>
+                <option value=1>RP</option>
+                <option value=2>FORMADORA</option>
+                <option value=8>CO-FORMADORA</option>           
             </select>
 
 
             <div class="text-center mt-6">
-                <button type="submit" name="submit" class="form-button">Registrar Bootcamp</button>
+                <button type="submit" name="submit" class="form-button">Registrar Staff</button>
             </div>
         </form>
     </div>
@@ -145,10 +149,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 </footer>
     
   </main>
-  
- 
-
-</body>
+ </body>
 </html>
 <?php
 
