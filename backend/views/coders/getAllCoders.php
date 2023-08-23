@@ -63,7 +63,7 @@
             ];
             
             $rolMap = [
-                0=>'SIN DEFINIR',
+                0 =>'SIN DEFINIR',
                 1 =>'RP',
                 2 => 'FORMADORA',
                 3 => 'CODER ASPIRANTE',
