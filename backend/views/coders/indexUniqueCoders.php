@@ -54,10 +54,10 @@
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
+        <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+          <li><a href="./../staff/indexStaff.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
         </ul>
       </li>
     </ul>

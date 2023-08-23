@@ -1,9 +1,11 @@
 <?php
-
+      use App\Controllers\StaffController;
+      require "./../../vendor/autoload.php"; 
+      
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["action"]) && $_GET["action"] === "list") {
         $staff = new StaffController;
-        $Staffs = $staff->getAll();
+        $Staffs = $staff->show($id);
         
     }
 
@@ -39,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         </a>
       </li>
       <li class="group has-submenu">
-        <a href="./LandingPageBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../landingPage/LandingPageBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-graduation-cap mr-2"></i>
           <span class="text-sm font-medium ">Bootcamps</span>
         </a>
@@ -107,8 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
            
         </tr>
        <?php 
-       use App\Controllers\StaffController;
-       require "./../../vendor/autoload.php";
+ 
        
         $staffList = new StaffController;
         $result = $staffList ->index();
