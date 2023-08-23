@@ -167,9 +167,12 @@
                 </div>
                <a href="http://localhost/talenthub/backend/views/coders/indexRuralCoders.php"> <button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button></a>
               </div>
-              </div> 
-              </div>   
-    <footer class="bg-white dark:bg-gray-900">
+              </div>
+          </div>
+        </div>
+      </div>
+           
+      <footer class="bg-transparent w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
     <div class="container px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#">
