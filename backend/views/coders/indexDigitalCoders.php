@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="./../../styles.css">
     <link rel="stylesheet" href="addCoder.css">
-    <title>FEMCODERS NORTE</title>
+    <title>DIGITAL ACADEMY</title>
 </head>
 <body>
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
@@ -74,7 +74,7 @@
   </aside>
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
 <div class="button-coders">
-    <h2>FEMCODERS NORTE - Listado de coders</h2>
+    <h2>DIGITAL ACADEMY - Listado de coders</h2>
     <a href="./RPaddCoder.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear nuevo coder</button>
     </a>
@@ -145,7 +145,7 @@
             ?>
         </tbody>
     </table>
-    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
+    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-1/2 fixed bottom-0">
     <div class="footerContainer px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#">

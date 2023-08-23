@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="./../../styles.css">
     <link rel="stylesheet" href="addCoder.css">
-    <title>FEMCODERS NORTE</title>
+    <title>RURAL CAMP</title>
 </head>
 <body>
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
@@ -74,7 +74,7 @@
   </aside>
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
 <div class="button-coders">
-    <h2>FEMCODERS NORTE - Listado de coders</h2>
+    <h2>RURAL CAMP - Listado de coders</h2>
     <a href="./RPaddCoder.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear nuevo coder</button>
     </a>
