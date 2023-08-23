@@ -40,7 +40,7 @@
 
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
-                            $id_coder = $_POST["id_coder"];
+                            $id_coder = $_POST["id_coder"]; //<==se usa un array que es recorrido para encontrar todos los registros de la tabla
                             $id_requirement = $_POST["id_requirement"];
                             $newStates = $_POST['state'];
                             $newDates = $_POST['date'];
@@ -53,14 +53,17 @@
                                 $data = [
                                     'state' => $newState,
                                     'date' => $newDate,
-                                ];
+                                ];      
                             
                                 $update = new Coders_requirementController();
                                 $update->update($single_id_coder, $single_id_requirement, $data);
                             }
+
+                            $id_coder_link = $_POST["id_coder"][0]; //<== se inserta una variable que recupera el primer elemento del array de registros de tabla
                             
-                            header('Location: showCoders_requirement.php?id_coder=' . $id_coder); 
+                            header('Location: showCoders_requirement.php?id_coder=' . $id_coder_link); 
                             exit();
+
                         }
 
                         foreach ($results as $row) {
