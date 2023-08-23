@@ -117,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </aside>
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
-    <h2 class="text-2xl font-semibold mb-4">Alta de nuevo miembro de Staff</h2>
+    <h2 class="text-2xl font-semibold mb-4">Edición Staff</h2>
         <form action="./editStaff.php" method="POST">
             <label for="name" class="block font-semibold">Nombre</label>
             <input type="text" name="name" class="form-input" required>
@@ -143,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="text-center mt-6">
                 <a href="./indexStaff.php">
-                <button type="submit" name="submit" class="form-button">Registrar Staff</button>
+                <button type="submit" name="submit" class="form-button">Actualizar Staff</button>
                 </a>
             </div>
         </form>
