@@ -53,20 +53,22 @@ class Coders_requirementController
     return $stm->fetchAll(\PDO::FETCH_ASSOC);
 }
 
-
-
 public function update($id_coder, $id_requirement, $data)
 {
     $query = "UPDATE coders_requirement
-        SET date=:date, state=:state WHERE id_coder =:id_coder AND id_requirement=:id_requirement";
+        SET state=?, date=? WHERE id_coder =? AND id_requirement=?";
     $stm = $this->connection->get_connection()->prepare($query);
     $stm->execute([
-        ':date' => $data['date'],
-        ':state' => $data['state'],
-        ':id_coder' => $id_coder,
-        ':id_requirement' => $id_requirement,
+        $data['state'], 
+        $data['date'],
+        $id_coder,
+        $id_requirement,
     ]);
+    
+    
 }
+
+
 public function edit($id_coder)
 {
     $id_coder = $_GET['id'];
@@ -104,15 +106,7 @@ public function get_requirement()
     return $requirement;
 }
 
-
-    public function delete($id_coder, $id_requirement)
-    {
-        $query = "DELETE FROM coders_requirement
-        WHERE id_coder=? AND id_requirement=?";
-        $stm = $this->connection->get_connection()->prepare($query);
-        return $stm->execute([$id_coder, $id_requirement]);
-    }
-    public function searchCoders($id_requirement)
+public function searchCoders($id_requirement)
     {
         $query = "SELECT id_coder FROM requirement_log WHERE id_requirement=:id_requirement";
         $stm = $this->connection->get_connection()->prepare($query);

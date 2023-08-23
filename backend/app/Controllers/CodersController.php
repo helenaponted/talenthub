@@ -29,7 +29,7 @@ class CodersController {
         $results = $stm->execute([$data['name_coder'], $data['surname1'], $data['surname2'], $data['email'], $data['phone'], $data['city'], $data['id_rol'], $data['id_bootcamp']]);
     
         if ($results) {
-            $coderId = $this->connection->get_connection()->lastInsertId(); // Obtener el ID del nuevo coder
+            $coderId = $this->connection->get_connection()->lastInsertId();
     
             $query = "INSERT INTO coders_requirement (id_coder, id_requirement, state, date)
                     SELECT ?, id_requirement, 0, 0

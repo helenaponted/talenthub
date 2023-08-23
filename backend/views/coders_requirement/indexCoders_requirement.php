@@ -21,7 +21,6 @@
         <tbody>
             <?php 
             use App\Controllers\Coders_requirementController;
-            use App\Controllers\CodersController;
             require "./../../vendor/autoload.php";
 
             $coders_requirementController = new Coders_requirementController;
