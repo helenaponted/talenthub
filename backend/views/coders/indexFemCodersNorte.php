@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <link rel="stylesheet" href="./../../../styles.css">
+    <link rel="stylesheet" href="./../../styles.css">
     <link rel="stylesheet" href="addCoder.css">
     <title>FEMCODERS NORTE</title>
 </head>
@@ -30,11 +30,10 @@
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
           <li><a href="./indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Barcelona</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
+          <li><a href="./indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
+          <li><a href="./indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
+          <li><a href="./indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
+          <li><a href="./../bootcamp/addBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
         </ul>
       </li>
       <li>
@@ -73,7 +72,7 @@
       </div>
     </div>
   </aside>
-  <main class="ml-56 p-8">
+  <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
 <div class="button-coders">
     <h2>FEMCODERS NORTE - Listado de coders</h2>
     <a href="./RPaddCoder.php">
@@ -146,11 +145,11 @@
             ?>
         </tbody>
     </table>
-    <footer class="bg-white dark:bg-gray-900 w-full relative bottom-0">
+    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
     <div class="footerContainer px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#">
-                <img class="w-auto h-7" src="./../public/LogoF5Footer.png" alt="">
+                <img class="w-auto h-7" src="./../../../public/LogoF5Footer.png" alt="">
             </a>
             <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">TalentHub</p>
             
