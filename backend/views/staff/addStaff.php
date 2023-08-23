@@ -122,8 +122,10 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 
             <div class="text-center mt-6">
+              <a href="indexStaff.php">
                 <button type="submit" name="submit" class="form-button">Registrar Staff</button>
-            </div>
+              </a>
+              </div>
         </form>
     </div>
 

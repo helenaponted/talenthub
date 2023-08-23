@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
   <main class="ml-56 p-8">
   
     <h2 class="text-2xl font-semibold mb-4 text-secondary titulo">Lista del Staff</h2>
-    <a href="./indexStaff.php">
+    <a href="./addStaff.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 buttonAddStaff">Crear nuevo staff</button>
     </a>
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -132,5 +132,25 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             </thead> 
     </table>
     </main>
+    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
+    <div class="footerContainer px-6 py-8 mx-auto">
+        <div class="flex flex-col items-center text-center">
+            <a href="#">
+                <img class="w-auto h-7" src="./../../../public/LogoF5Footer.png" alt="">
+            </a>
+            <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">TalentHub</p>
+            
+        </div>
+        <hr class="my-10 border-gray-200 dark:border-gray-700" />
+        <div class="flex flex-col items-center sm:flex-row sm:justify-between">
+            <p class="text-sm text-gray-500">© Copyright 2023. All Rights Reserved.</p>
+            <div class="flex mt-3 -mx-2 sm:mt-0">
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Teams </a>
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Privacy </a>
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Cookies </a>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
