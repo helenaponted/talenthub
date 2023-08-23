@@ -5,6 +5,10 @@
     
     
 }
+.buttonAddStaff{
+    justify-content: center;
+    text-align: center;
+}
 body{
     margin-left: 3%;
 }

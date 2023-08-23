@@ -1,9 +1,12 @@
 <?php
 
+      use App\Controllers\StaffController;
+       require "./../../vendor/autoload.php"; 
+
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["action"]) && $_GET["action"] === "list") {
         $staff = new StaffController;
-        $Staffs = $staff->getAll();
+        $Staffs = $staff->show($id);
         
     }
 
@@ -27,13 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     </div>
     <ul class="py-4">
       <li>
-        <a href="./LandingPage.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../landingPage/LandingPage.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-house mr-2"></i>
           <span class="text-sm font-medium ">Inicio</span>
         </a>
       </li>
       <li class="group has-submenu">
-        <a href="./LandingPageBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../landingPage/LandingPageBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-graduation-cap mr-2"></i>
           <span class="text-sm font-medium ">Bootcamps</span>
         </a>
@@ -63,9 +66,9 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="./../staff/indexTrainers" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="./../staff/indexCoTrainers" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="./../staff/indexRP" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+          <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
           
         </ul>
       </li>
@@ -99,9 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
            
         </tr>
        <?php 
-       use App\Controllers\StaffController;
-       require "./../../vendor/autoload.php";
-       
+      
         $staffList = new StaffController;
         $bootcampMap = [
             1=> 'SIN DEFINIR',

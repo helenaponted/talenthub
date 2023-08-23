@@ -30,10 +30,10 @@
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
           <li><a href="./../coders/indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
-          <li><a href="./../coders/indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
-          <li><a href="./../coders/indexRuralCamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
-          <li><a href="./../coders/indexDigitalAcademy.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
-          <li><a href="./../bootcamp/RPaddBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
+          <li><a href="./../coders/indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
+          <li><a href="./../coders/indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
+          <li><a href="./../coders/indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
+          <li><a href="./../bootcamp/addBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
         </ul>
       </li>
       <li>
@@ -54,9 +54,9 @@
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="./../staff/indexTrainers" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="./../staff/indexCoTrainers" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="./../staff/indexRP" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+        <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
           
         </ul>
       </li>
@@ -95,7 +95,7 @@
                   </span>
                   <h3 class="text-lg text-gray-600 font-semibold mb-2">Zona Norte</h3>
                 </div>
-                <button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button>
+               <a href="http://localhost/talenthub/backend/views/coders/indexFemCodersNorte.php" ><button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button></a>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@
                   </span>
                   <h3 class="text-lg text-gray-600 font-semibold mb-2">Langreo</h3>
                 </div>
-                <button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button>
+              <a href="http://localhost/talenthub/backend/views/coders/indexDigitalCoders.php">  <button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button></a>
               </div>
             </div>
           </div>
@@ -142,13 +142,13 @@
                   <h3 class="text-lg text-gray-600 font-semibold mb-2">Asturias</h3>
                 </div>
               
-                <button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button>
+                <a href="http://localhost/talenthub/backend/views/coders/indexUniqueCoders.php"><button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Box-3 -->
+  
       <div class="bg-white">
         <div>
           <div class="shadow-lg hover:shadow-xl transform transition duration-500 hover:scale-105">
@@ -165,15 +165,34 @@
                   </span>
                   <h3 class="text-lg text-gray-600 font-semibold mb-2">Zonas Rurales</h3>
                 </div>
-                <button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button>
+               <a href="http://localhost/talenthub/backend/views/coders/indexRuralCoders.php"> <button class="mt-12 w-full text-center bg-red-400 py-2 rounded-lg">Entrar</button></a>
               </div>
-            </div>
+              </div>
           </div>
         </div>
       </div>
+           
+      <footer class="bg-transparent w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
+    <div class="container px-6 py-8 mx-auto">
+        <div class="flex flex-col items-center text-center">
+            <a href="#">
+                <img class="w-auto h-7" src="./../../../public/LogoF5Footer.png" alt="">
+            </a>
+            <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">TalentHub</p>
+            
+        </div>
+        <hr class="my-10 border-gray-200 dark:border-gray-700" />
+        <div class="flex flex-col items-center sm:flex-row sm:justify-between">
+            <p class="text-sm text-gray-500">© Copyright 2023. All Rights Reserved.</p>
+            <div class="flex mt-3 -mx-2 sm:mt-0">
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Teams </a>
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Privacy </a>
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Cookies </a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-</div>
+</footer>
+
+
 </body>
 </html>
