@@ -25,13 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">   
     <tr>
-            <th scope="col" class="px-6 py-3">ID</th>
+        
             <th scope="col" class="px-6 py-3">Nombre</th>
             <th scope="col" class="px-6 py-3">Apellido 1</th>
             <th scope="col" class="px-6 py-3">Apellido 2</th>
             <th scope="col" class="px-6 py-3">Email</th>
-            <th scope="col" class="px-6 py-3">id_Rol</th>
-            <th scope="col" class="px-6 py-3">id_Bootcamp</th>
+            <th scope="col" class="px-6 py-3">Rol</th>
+            <th scope="col" class="px-6 py-3">Bootcamp</th>
            
         </tr>
        <?php 
@@ -42,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $result = $staffList ->index();
             foreach ($result as $row) { ?>
                 <tr>
-                    <td scope="col" class="px-6 py-3"><?php echo $row['id']; ?></td>
                     <td scope="col" class="px-6 py-3"><?php echo $row['name_staff']; ?></td>
                     <td scope="col" class="px-6 py-3"><?php echo $row['surname1']; ?></td>
                     <td scope="col" class="px-6 py-3"><?php echo $row['surname2']; ?></td>
