@@ -78,11 +78,11 @@
     <a href="./RPaddCoder.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear nuevo coder</button>
     </a>
-    <a href="./indexAddCoderToBootcamp.php">
+    <a href="indexaddCoderToBootcampfemcoders.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Añadir coder a este bootcamp</button>
     </a>
 </div>
-    <div id="table" class="relative overflow-x-auto">
+    <div id="table-container" class="relative overflow-x-auto">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -145,6 +145,8 @@
             ?>
         </tbody>
     </table>
+        
+    
     <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
     <div class="footerContainer px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
@@ -166,7 +168,7 @@
     </div>
 </footer>
     
-  </main>
+</main>
     
 </body>
 </html>

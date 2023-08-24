@@ -106,5 +106,15 @@ public function getReserveCoders()
     return $stm->fetchAll(\PDO::FETCH_ASSOC);
 }
 
+public function updateBootcamp($id, $newBootcampValue) {
+    $query = "UPDATE coders SET id_bootcamp = ?, id_rol = 4 WHERE id = ?";
+    $stm = $this->connection->get_connection()->prepare($query);
+    $success = $stm->execute([$newBootcampValue, $id]);
+
+    return $success;
+}
+
+
+
 
     }
