@@ -40,7 +40,8 @@
 
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
-                            $id_coder = $_POST["id_coder"]; 
+                            $id_coder = $_POST["id_coder"]; //<==se usa un array que es recorrido para encontrar todos los registros de la tabla
+                            $id_requirement = $_POST["id_requirement"];
                             $newStates = $_POST['state'];
                             $newDates = $_POST['date'];
 
