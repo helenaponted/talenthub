@@ -45,8 +45,7 @@ composer init
 
    <h2> Nuestro Prototipo de Figma </h2>
 
-![figma](https://github.com/Dafnay/HeroesApp/assets/109661844/67623766-02f3-4099-8705-e99e8a321f67)
-
+![Captura de pantalla 2023-08-24 a las 17 11 34](https://github.com/helenaponted/talenthub/assets/109661844/343e181f-4630-490c-8241-d464af1a9dfd)
 
 
    <h2> Nuestro User Flow </h2>
@@ -61,7 +60,8 @@ composer init
 
   <h2> Modelado base de Datos </h2>
 
-<img width="824" alt="Modelado" src="https://github.com/Dafnay/HeroesApp/assets/109661844/d058ed59-9549-4664-9167-7b15db175a9e">
+<img width="785" alt="Captura de pantalla 2023-08-24 a las 17 12 18" src="https://github.com/helenaponted/talenthub/assets/109661844/4b453316-9c60-464a-87e6-ea23944d73d2">
+
 
    ## Autoras
 
