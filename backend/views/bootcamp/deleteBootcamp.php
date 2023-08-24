@@ -16,6 +16,7 @@ require "./../../vendor/autoload.php";
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
   <title>Borrar Bootcamp</title>
 </head>
 <body style="background-color:#FFA37F;">
@@ -36,7 +37,7 @@ require "./../../vendor/autoload.php";
         </div>
         <!--footer-->
         <div class="p-3  mt-2 text-center space-x-4 md:block">
-            <a href="getAllCoders.php" >
+            <a href="./indexBootcamp.php" >
             <button class="mb-2 md:mb-0 bg-black px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-200 rounded-full hover:shadow-lg hover:bg-red-800">
                 VOLVER
             </button>

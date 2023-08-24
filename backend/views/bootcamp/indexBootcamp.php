@@ -52,10 +52,10 @@
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
+          <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+          <li><a href="./../staff/indexStaff.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
         </ul>
       </li>
     </ul>
@@ -71,10 +71,11 @@
     </div>
   </aside>
   <div class="h-full ml-14 mt-14 mb-10 md:ml-64 sm:10"> 
-    <h1 class="text-2xl font-semibold mb-4 text-secondary">Listado de Bootcamps</h1>
+    <h2 class="text-2xl font-semibold mb-4 text-secondary titulo">Listado de Bootcamps</h2>
     <a href="./addBootcamp.php">
-        <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2 mb-2">Crear Bootcamp</button>
+        <button class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear Bootcamp</button>
     </a>
+    <div id="table" class="relative overflow-x-auto">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -92,6 +93,12 @@
             require "./../../vendor/autoload.php";
 
             $bootcampList = new BootcampController;
+            $remoteMap = [
+              0=>'SIN DEFINIR',
+              1 =>'REMOTO',
+              2 => 'PRESENCIAL',
+           
+          ];
             $result = $bootcampList->index();
             foreach ($result as $row) {
                 echo "<tr>"; 
@@ -99,17 +106,17 @@
                 echo "<td>" . $row["name_bootcamp"] . "</td>";
                 echo "<td>" . $row["start"] . "</td>";
                 echo "<td>" . $row["end"] . "</td>";
-                echo "<td>" . $row["remote"] . "</td>";
+                echo "<td>" . $remoteMap[$row["remote"]] . "</td>";
                 echo "<td>
                     <form action='editBootcamp.php' method='GET'>
                         <input type='hidden' name='id' value='" . $row["id"] . "'>
-                        <button type='submit' class='text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 mb-2'>Edit</button>
+                        <button type='submit' class='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'>Edit</button>
                     </form>
                 </td>";
                 echo "<td>
                     <form action='deleteBootcamp.php' method='GET'>
                         <input type='hidden' name='id' value='" . $row["id"] . "'>
-                        <button type='submit' class='text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 mb-2'>Delete</button>
+                        <button type='submit' class='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900'>Delete</button>
                     </form>
                 </td>";
                 echo "</tr>";
@@ -117,6 +124,7 @@
             ?>
         </tbody>
     </table>
+    </div>
   </div>
 </body>
 </html>
