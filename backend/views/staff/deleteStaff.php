@@ -19,7 +19,6 @@ require "./../../vendor/autoload.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +42,7 @@ require "./../../vendor/autoload.php";
 </svg>
                         <h2 class="text-xl font-bold py-4 ">El coder se ha eliminado correctamente</h2>
         </div>
-        <!--footer-->
+        
         <div class="p-3  mt-2 text-center space-x-4 md:block">
             <a href="indexStaff.php" >
             <button class="mb-2 md:mb-0 bg-black px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-200 rounded-full hover:shadow-lg hover:bg-red-800">
@@ -57,6 +56,6 @@ require "./../../vendor/autoload.php";
 </body>
 </html>
 <div>
-    <div>
+<div>
 
       
