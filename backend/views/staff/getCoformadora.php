@@ -82,10 +82,10 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     </ul>
     <div class="px-4 py-2 mt-auto">
       <div class="flex items-center space-x-2 config">
-        <a href="#" class="text-gray-500 hover:text-orange-500">
+        <a href="./../../config.php" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-cog text-lg"></i>
         </a>
-        <a href="#" class="text-gray-500 hover:text-orange-500">
+        <a href="./../../index.php" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-sign-out-alt text-lg"></i>
         </a>
       </div>
