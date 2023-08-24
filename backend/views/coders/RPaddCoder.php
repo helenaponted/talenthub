@@ -55,10 +55,10 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
           <li><a href="./indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
-          <li><a href="./indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
-          <li><a href="./indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
-          <li><a href="./indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
-          <li><a href="./../bootcamp/addBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
+          <li><a href="./indexUnique.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
+          <li><a href="./indexRuralCamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
+          <li><a href="./indexDigitalAcademy.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
+          <li><a href="./../bootcamp/RPaddBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
         </ul>
       </li>
       <li>
@@ -68,7 +68,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         </a>
       </li>
       <li>
-        <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./getReserveCoders.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-regular fa-clock mr-2"></i>
           <span class="text-sm font-medium">Coders en reserva</span>
         </a>
@@ -79,19 +79,19 @@ require_once __DIR__ . '/../../vendor/autoload.php';
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
+          <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+          
         </ul>
       </li>
     </ul>
     <div class="px-4 py-2 mt-auto">
       <div class="flex items-center space-x-2 config">
-        <a href="#" class="text-gray-500 hover:text-orange-500">
+        <a href="./../../config.php" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-cog text-lg"></i>
         </a>
-        <a href="#" class="text-gray-500 hover:text-orange-500">
+        <a href="./../../index.php" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-sign-out-alt text-lg"></i>
         </a>
       </div>
@@ -145,26 +145,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         </form>
     </div>
 
-    <footer class="bg-white dark:bg-gray-900 w-full relative bottom-0">
-    <div class="footerContainer px-6 py-8 mx-auto">
-        <div class="flex flex-col items-center text-center">
-            <a href="#">
-                <img class="w-auto h-7" src="./../public/LogoF5Footer.png" alt="">
-            </a>
-            <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">TalentHub</p>
-            
-        </div>
-        <hr class="my-10 border-gray-200 dark:border-gray-700" />
-        <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-            <p class="text-sm text-gray-500">© Copyright 2023. All Rights Reserved.</p>
-            <div class="flex mt-3 -mx-2 sm:mt-0">
-                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Teams </a>
-                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Privacy </a>
-                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Cookies </a>
-            </div>
-        </div>
-    </div>
-</footer>
+    
     
   </main>
   

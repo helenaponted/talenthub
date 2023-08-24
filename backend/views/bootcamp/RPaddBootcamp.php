@@ -1,14 +1,38 @@
+<?php
+use App\Controllers\BootcampController;
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+ if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $data = [
+        'name_bootcamp' => $_POST["name_bootcamp"],
+        'start' => $_POST["start"],
+        'end' => $_POST["end"],
+        'remote' => $_POST["remote"],
+    ];
+
+    $bootcamp = new BootcampController;
+    $bootcamp->store($data);
+    header("Location: indexBootcamp.php");
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear nuevo bootcamp</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./../bootcamp/bootcamp.css">
     <link rel="stylesheet" href="./../coders/addCoder.css">
-    <title>Talenthub</title>
+
+
 </head>
+
 <body>
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
     <div class="logo-navbar flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
@@ -71,63 +95,36 @@
       </div>
     </div>
   </aside>
-  <div class="h-full ml-14 mt-14 mb-10 md:ml-64 sm:10"> 
-    <h2 class="text-2xl font-semibold mb-4 text-secondary titulo">Listado de Bootcamps</h2>
-    <a href="./addBootcamp.php">
-        <button class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear Bootcamp</button>
-    </a>
-    <div id="table" class="relative overflow-x-auto">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                
-                <th scope="col" class="px-6 py-3">Nombre del Bootcamp</th>
-                <th scope="col" class="px-6 py-3">Empieza</th>
-                <th scope="col" class="px-6 py-3">Acaba</th>
-                <th scope="col" class="px-6 py-3">¿Es remoto?</th>
-                <th scope="col" class="px-6 py-3">Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            use App\Controllers\BootcampController;
-            require "./../../vendor/autoload.php";
 
-            $bootcampList = new BootcampController;
-            $remoteMap = [
-              0=>'SIN DEFINIR',
-              1 =>'REMOTO',
-              2 => 'PRESENCIAL',
-              ""=>""
-           
-          ];
-            $result = $bootcampList->index();
+    <main class="ml-56 p-8">
+        <h2 class="text-2xl font-semibold mb-4">Crear un nuevo bootcamp</h2>
+        <form action="./rpaddBootcamp.php" method="POST">
+            <label for="name" class="block font-semibold">Nombre</label>
+            <input type="text" name="name" class="form-input" required>
 
-            foreach ($result as $row) {
-                echo "<tr>"; 
-                
-                echo "<td>" . $row["name_bootcamp"] . "</td>";
-                echo "<td>" . $row["start"] . "</td>";
-                echo "<td>" . $row["end"] . "</td>";
-                echo "<td>" .$remoteMap [$row["remote"]] . "</td>";
-                echo "<td>
-                    <form action='editBootcamp.php' method='GET'>
-                        <input type='hidden' name='id' value='" . $row["id"] . "'>
-                        <button type='submit' class='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'>Edit</button>
-                    </form>
-                </td>";
-                echo "<td>
-                    <form action='deleteBootcamp.php' method='GET'>
-                        <input type='hidden' name='id' value='" . $row["id"] . "'>
-                        <button type='submit' class='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900'>Delete</button>
-                    </form>
-                </td>";
-                echo "</tr>";
-            }
-            ?>
-        </tbody>
-    </table>
-    </div>
-  </div>
+            <label for="start" class="block font-semibold">Fecha de inicio</label>
+            <input type="date" name="surname2" class="form-input">
+
+            <label for="end" class="block font-semibold">Fecha de fin</label>
+            <input type="date" name="end" class="form-input">
+
+            <label for="remote" class="block font-semibold">¿Se realiza en remoto?</label>
+            <input type="radio" name="remote" value="si"> Sí
+            <input type="radio" name="remote" value="no"> No
+            <div class="text-center mt-6">
+                <button type="submit" name="submit" class="form-button">Registrar bootcamp</button>
+            </div>
+
+            
+        </form>
+        </div>
+
+     
+
+    </main>
+
+
+
 </body>
+
 </html>

@@ -35,8 +35,9 @@ require './../../vendor/autoload.php';
 </head>
 <body>
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
-    <div class="logo flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
-      <img src="./../../../src/assets/logo-color.svg" alt="Logo" />
+    <div class="logo-navbar flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
+      <img src="./../../../src/assets/logo-color.svg" alt="LogoTalenthub" />
+      
     </div>
     <ul class="py-4">
       <li>
@@ -65,7 +66,7 @@ require './../../vendor/autoload.php';
         </a>
       </li>
       <li>
-        <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../coders/getReserveCoders.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-regular fa-clock mr-2"></i>
           <span class="text-sm font-medium">Coders en reserva</span>
         </a>
@@ -76,10 +77,10 @@ require './../../vendor/autoload.php';
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
+          <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+          
         </ul>
       </li>
     </ul>
@@ -109,9 +110,9 @@ require './../../vendor/autoload.php';
             <label for="remote" class="block font-semibold">¿Es Remoto?</label>
             <select name="remote" class="form-select">
                 <option value="">-- Selecciona un Bootcamp --</option>
-                <option value=1>SIN DEFINIR</option>
-                <option value=2>REMOTO</option>
-                <option value=3>PRESENCIAL</option>           
+                <option value=0>SIN DEFINIR</option>
+                <option value=1>REMOTO</option>
+                <option value=2>PRESENCIAL</option>           
             </select>
 
 
@@ -120,27 +121,6 @@ require './../../vendor/autoload.php';
             </div>
         </form>
     </div>
-
-    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
-    <div class="footerContainer px-6 py-8 mx-auto">
-        <div class="flex flex-col items-center text-center">
-            <a href="#">
-                <img class="w-auto h-7" src="./../../../public/LogoF5Footer.png" alt="">
-            </a>
-            <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">TalentHub</p>
-            
-        </div>
-        <hr class="my-10 border-gray-200 dark:border-gray-700" />
-        <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-            <p class="text-sm text-gray-500">© Copyright 2023. All Rights Reserved.</p>
-            <div class="flex mt-3 -mx-2 sm:mt-0">
-                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Teams </a>
-                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Privacy </a>
-                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Cookies </a>
-            </div>
-        </div>
-    </div>
-</footer>
     
   </main>
   

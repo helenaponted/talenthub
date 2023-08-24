@@ -82,6 +82,48 @@ class CodersController {
     $stm->execute();
     return $stm->fetchAll(\PDO::FETCH_ASSOC);
 }
+
+public function getDigitalAcademy()
+{
+    $query = "SELECT * FROM coders WHERE id_bootcamp = 3 and id_rol = 4"; 
+    $stm = $this->connection->get_connection()->prepare($query);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
+public function getUnique()
+{
+    $query = "SELECT * FROM coders WHERE id_bootcamp = 4 and id_rol = 4"; 
+    $stm = $this->connection->get_connection()->prepare($query);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
+public function getRuralCamp()
+{
+    $query = "SELECT * FROM coders WHERE id_bootcamp = 5 and id_rol = 4"; 
+    $stm = $this->connection->get_connection()->prepare($query);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+public function getReserveCoders()
+{
+    $query = "SELECT * FROM coders WHERE id_rol = 5"; 
+    $stm = $this->connection->get_connection()->prepare($query);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+public function updateBootcamp($id, $newBootcampValue) {
+    $query = "UPDATE coders SET id_bootcamp = ?, id_rol = 4 WHERE id = ?";
+    $stm = $this->connection->get_connection()->prepare($query);
+    $success = $stm->execute([$newBootcampValue, $id]);
+
+    return $success;
+}
+
+
+
+
     }
 
     ?>

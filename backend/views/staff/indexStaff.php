@@ -20,6 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <title>Alta de nuevo Staff</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https:////cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     
     <link rel="stylesheet" href="./../../styles.css">
     <link rel="stylesheet" href="./../coders/addCoder.css">
@@ -39,26 +42,27 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         </a>
       </li>
       <li class="group has-submenu">
-        <a href="./../landingPage/LandingPageBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../bootcamp/indexBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-graduation-cap mr-2"></i>
           <span class="text-sm font-medium ">Bootcamps</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="./../coders/indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
-          <li><a href="./../coders/indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
-          <li><a href="./../coders/indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
-          <li><a href="./../coders/indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
+          <li><a href="./indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
+          <li><a href="./../coders/indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Barcelona</a></li>
+          <li><a href="./../coders/indexUnique.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
+          <li><a href="./../coders/indexaddcodertobootcampruralcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
+          <li><a href="./../coders/indexDigitalAcademy.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
           <li><a href="./../bootcamp/addBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
         </ul>
       </li>
       <li>
-        <a href="./../coders/getAllCoders.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./getAllCoders.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-users mr-2"></i>
           <span class="text-sm font-medium">Todos los coders</span>
         </a>
       </li>
       <li>
-        <a href="./../coders/getReserveCoders" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../coders/getReserveCoders.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-regular fa-clock mr-2"></i>
           <span class="text-sm font-medium">Coders en reserva</span>
         </a>
@@ -69,19 +73,19 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="./../staff/indexTrainers" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="./../staff/indexCoTrainers" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="./../staff/indexRP" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
-          
+          <li><a href="./getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+        
         </ul>
       </li>
     </ul>
     <div class="px-4 py-2 mt-auto">
       <div class="flex items-center space-x-2 config">
-        <a href="./../../config.php" class="text-gray-500 hover:text-orange-500">
+        <a href="#" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-cog text-lg"></i>
         </a>
-        <a href="./../../index.php" class="text-gray-500 hover:text-orange-500">
+        <a href="#" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-sign-out-alt text-lg"></i>
         </a>
       </div>
@@ -94,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <a href="./addStaff.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 buttonAddStaff">Crear nuevo staff</button>
     </a>
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table id="codersTable" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">   
     <tr>
         
@@ -149,6 +153,15 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             </thead> 
     </table>
     </main>
-    
+   
+<script>
+    $(document).ready(function() {
+  $('#codersTable').DataTable();
+});
+
+
+
+
+</script>  
 </body>
 </html>

@@ -10,9 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <link rel="stylesheet" href="./../../styles.css">
+    <link rel="stylesheet" href="./../../../styles.css">
     <link rel="stylesheet" href="addCoder.css">
-    <title>FEMCODERS NORTE</title>
+    <title>RURAL CAMP</title>
 </head>
 <body>
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
@@ -75,17 +75,17 @@
       </div>
     </div>
   </aside>
-  <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
+  <main class="ml-56 p-8">
 <div class="button-coders">
-    <h2>FEMCODERS NORTE - Listado de coders</h2>
+    <h2>RURAL CAMP - Listado de coders</h2>
     <a href="./RPaddCoder.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear nuevo coder</button>
     </a>
-    <a href="indexaddCoderToBootcampfemcoders.php">
+    <a href="./indexaddcodertobootcampruralcamp.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Añadir coder a este bootcamp</button>
     </a>
 </div>
-    <div id="table-container" class="relative overflow-x-auto">
+    <div id="table" class="relative overflow-x-auto">
     <table id="codersTable" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -117,7 +117,7 @@
             require "./../../vendor/autoload.php";
 
             $codersController = new CodersController;
-            $result = $codersController -> getFemCodersNorte();
+            $result = $codersController -> getRuralCamp();
 
             foreach ($result as $row){
                 echo "<tr>";
@@ -146,18 +146,37 @@
                 </a>
                 </td>";
 
-       
+      
         
             }
 
             ?>
         </tbody>
     </table>
-        
-
+    <footer class="bg-white dark:bg-gray-900 w-full relative bottom-0">
+    <div class="footerContainer px-6 py-8 mx-auto">
+        <div class="flex flex-col items-center text-center">
+            <a href="#">
+                <img class="w-auto h-7" src="./../public/LogoF5Footer.png" alt="">
+            </a>
+            <p class="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400">TalentHub</p>
+            
+        </div>
+        <hr class="my-10 border-gray-200 dark:border-gray-700" />
+        <div class="flex flex-col items-center sm:flex-row sm:justify-between">
+            <p class="text-sm text-gray-500">© Copyright 2023. All Rights Reserved.</p>
+            <div class="flex mt-3 -mx-2 sm:mt-0">
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Teams </a>
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Privacy </a>
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Cookies </a>
+            </div>
+        </div>
+    </div>
+</footer>
     
-</main>
-<script>
+  </main>
+  
+ <script>
     $(document).ready(function() {
   $('#codersTable').DataTable();
 });
@@ -165,7 +184,7 @@
 
 
 
-</script>  
+</script> 
     
 </body>
 </html>
