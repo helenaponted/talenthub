@@ -25,9 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bootcampController = new BootcampController();
     $bootcampData = $bootcampController->show($id);
     $newNameBootcamp = $bootcampData['name_bootcamp'];
-    $start = $startData['start'];
-    $end = $endData['end'];
-    $remote = $remoteData['remote'];
+    $start = $bootcampData['start'];
+    $end = $bootcampData['end'];
+    $remote = $bootcampData['remote'];
    
 }
 ?>
