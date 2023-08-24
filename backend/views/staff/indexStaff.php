@@ -108,8 +108,12 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             <th scope="col" class="px-6 py-3">Email</th>
             <th scope="col" class="px-6 py-3">Rol</th>
             <th scope="col" class="px-6 py-3">Bootcamp</th>
+            <th scope="col" class="px-6 py-3">Acciones</th>
+           
            
         </tr>
+        </thead>
+        <tbody>
        <?php 
         $staffList = new StaffController;
         $result = $staffList ->index();
@@ -150,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                 </tr>
                
         <?php } ?>
-            </thead> 
+        <tbody>      
     </table>
     </main>
    
