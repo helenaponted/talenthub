@@ -40,8 +40,7 @@
 
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
-                            $id_coder = $_POST["id_coder"]; //<==se usa un array que es recorrido para encontrar todos los registros de la tabla
-                            $id_requirement = $_POST["id_requirement"];
+                            $id_coder = $_POST["id_coder"]; 
                             $newStates = $_POST['state'];
                             $newDates = $_POST['date'];
 
@@ -59,10 +58,12 @@
                                 $update->update($single_id_coder, $single_id_requirement, $data);
                             }
 
-                            $id_coder_link = $_POST["id_coder"][0]; //<== se inserta una variable que recupera el primer elemento del array de registros de tabla
+                            $id_coder_link = $_POST["id_coder"][0]; 
                             
-                            header('Location: showCoders_requirement.php?id_coder=' . $id_coder_link); 
+                            //header('Location: showCoders_requirement.php?id_coder=' . $id_coder_link); <------ USA ESTE HEADER SI NECESITAS CARGAR LA MISMA VISTA
+                            header('Location: ../coders/getAllCoders.php?id_coder=' . $id_coder);  //<------ USA ESTE HEADER SI NECESITAS REGRESAR A LA VISTA GENERAL DE LOS CODERS
                             exit();
+                            
 
                         }
 
