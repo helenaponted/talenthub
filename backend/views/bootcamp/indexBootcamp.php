@@ -97,16 +97,18 @@
               0=>'SIN DEFINIR',
               1 =>'REMOTO',
               2 => 'PRESENCIAL',
+              ""=>""
            
           ];
             $result = $bootcampList->index();
+
             foreach ($result as $row) {
                 echo "<tr>"; 
                 echo "<td >" . $row["id"] . "</td>";
                 echo "<td>" . $row["name_bootcamp"] . "</td>";
                 echo "<td>" . $row["start"] . "</td>";
                 echo "<td>" . $row["end"] . "</td>";
-                echo "<td>" . $remoteMap[$row["remote"]] . "</td>";
+                echo "<td>" .$remoteMap [$row["remote"]] . "</td>";
                 echo "<td>
                     <form action='editBootcamp.php' method='GET'>
                         <input type='hidden' name='id' value='" . $row["id"] . "'>

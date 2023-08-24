@@ -109,9 +109,9 @@ require './../../vendor/autoload.php';
             <label for="remote" class="block font-semibold">¿Es Remoto?</label>
             <select name="remote" class="form-select">
                 <option value="">-- Selecciona un Bootcamp --</option>
-                <option value=1>SIN DEFINIR</option>
-                <option value=2>REMOTO</option>
-                <option value=3>PRESENCIAL</option>           
+                <option value=0>SIN DEFINIR</option>
+                <option value=1>REMOTO</option>
+                <option value=2>PRESENCIAL</option>           
             </select>
 
 

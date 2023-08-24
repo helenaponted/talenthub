@@ -111,16 +111,16 @@ require_once __DIR__ . '/../../vendor/autoload.php';
             <label for="email" class="block font-semibold">Email</label>
             <input type="text" name="email" class="form-input" required>
 
-            <label for="id_staff" class="block font-semibold">Rol</label>
-            <select name="id_staff" class="form-select">
+            <label for="id_rol" class="block font-semibold">Rol</label>
+            <select name="id_rol" class="form-select">
                 <option value="">-- Selecciona un Rol --</option>
                 <option value=0>sin definir</option>
                 <option value=1>RP</option>
                 <option value=2>FORMADORA</option>
                 <option value=8>CO-FORMADORA</option>           
             </select>
-            <label for="id_bootCamp" class="block font-semibold">Bootcamp</label>
-            <select name="id_bootCamp" class="form-select" value="<?= $newId_bootcamp ?>">
+            <label for="id_bootcamp" class="block font-semibold">Bootcamp</label>
+            <select name="id_bootcamp" class="form-select" value="<?= $newId_bootcamp ?>">
                 <option value="">-- Selecciona BootCamp--</option>
                 <option value=1>SIN DEFINIR</option>
                 <option value=2>FEMCODERS NORTE</option>
@@ -131,7 +131,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 
             <div class="text-center mt-6">
-              <a href="indexStaff.php">
+              <a href="./indexStaff.php">
                 <button type="submit" name="submit" class="form-button">Registrar Staff</button>
               </a>
               </div>

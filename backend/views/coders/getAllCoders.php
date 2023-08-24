@@ -120,7 +120,6 @@
             require "./../../vendor/autoload.php";
 
             $codersController = new CodersController;
-
             $bootcampMap = [
               0=> 'NO ASIGNADO',
                 1=> 'SIN DEFINIR',

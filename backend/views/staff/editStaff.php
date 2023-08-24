@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newId_bootcamp = $_POST["id_bootcamp"];
 
     $data = [
+      
         'name_staff' => $newNameStaff,
         'surname1' => $newSurname1,
         'surname2' => $newSurname2,
@@ -21,8 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'id_bootcamp' => $newId_bootcamp
     ];
 
-    $edit = new StaffController;
-    $edit->edit($id, $data);
 
     
 } else {
@@ -35,8 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newEmail = $staffData['email'];
     $newId_rol = $staffData['id_rol'];
     $newId_bootcamp = $staffData['id_bootcamp'];
-    header("Location: indexStaff.php");
-    exit();
+  
 }
 ?>
 
@@ -120,6 +118,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
     <h2 class="text-2xl font-semibold mb-4">Edición Staff</h2>
         <form action="./editStaff.php" method="POST">
+        <input type="hidden" name="id" value="<?= $id ?>">
+<input type="hidden" name="id_bootcamp" value="<?= $newId_bootcamp ?>">
+
             <label for="name_staff" class="block font-semibold">Nombre</label>
             <input type="text" name="name_staff" class="form-input" value="<?= $newNameStaff ?>"required>
 
@@ -140,8 +141,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <option value=2>FORMADORA</option>
                 <option value=8>CO-FORMADORA</option>           
             </select>
-            <label for="id_bootCamp" class="block font-semibold">Bootcamp</label>
-            <select name="id_bootCamp" class="form-select" value="<?= $newId_bootcamp ?>">
+            <label for="id_bootcamp" class="block font-semibold">Bootcamp</label>
+            <select name="id_bootcamp" class="form-select" value="<?= $newId_bootcamp ?>">
                 <option value="">-- Selecciona BootCamp--</option>
                 <option value=1>SIN DEFINIR</option>
                 <option value=2>FEMCODERS NORTE</option>
