@@ -35,8 +35,9 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 <body>
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
-    <div class="logo flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
-      <img src="./../../../src/assets/logo-color.svg" alt="Logo" />
+    <div class="logo-navbar flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
+      <img src="./../../../src/assets/logo-color.svg" alt="LogoTalenthub" />
+      
     </div>
     <ul class="py-4">
       <li>
@@ -46,16 +47,16 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         </a>
       </li>
       <li class="group has-submenu">
-        <a href="./../landingPage/LandingPageBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../bootcamp/indexBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-graduation-cap mr-2"></i>
           <span class="text-sm font-medium ">Bootcamps</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
           <li><a href="./../coders/indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
-          <li><a href="./../coders/indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
-          <li><a href="./../coders/indexRuralCamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
-          <li><a href="./../coders/indexDigitalAcademy.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
-          <li><a href="./../bootcamp/RPaddBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
+          <li><a href="./../coders/indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
+          <li><a href="./../coders/indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
+          <li><a href="./../coders/indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
+          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
         </ul>
       </li>
       <li>
@@ -85,15 +86,15 @@ require_once __DIR__ . '/../../vendor/autoload.php';
     </ul>
     <div class="px-4 py-2 mt-auto">
       <div class="flex items-center space-x-2 config">
-        <a href="./../../config.php" class="text-gray-500 hover:text-orange-500">
+        <a href="#" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-cog text-lg"></i>
         </a>
-        <a href="./../../index.php" class="text-gray-500 hover:text-orange-500">
+        <a href="#" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-sign-out-alt text-lg"></i>
         </a>
       </div>
     </div>
-  </aside> 
+  </aside>
 
     <main class="ml-56 p-8">
         <h2 class="text-2xl font-semibold mb-4">Crear un nuevo bootcamp</h2>

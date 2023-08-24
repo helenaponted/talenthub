@@ -75,7 +75,7 @@
     </div>
   </aside>
 <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
-<!-- <div class="h-full ml-14 mt-14 mb-10 md:ml-64 sm:10">  -->
+
     <div class="button-coders">
         <h1>Listado de Coders</h1>
         <a href="./RPaddCoder.php">

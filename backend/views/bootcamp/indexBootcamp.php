@@ -11,8 +11,9 @@
 </head>
 <body>
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
-    <div class="logo flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
-      <img src="./../../../src/assets/logo-color.svg" alt="Logo" />
+    <div class="logo-navbar flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
+      <img src="./../../../src/assets/logo-color.svg" alt="LogoTalenthub" />
+      
     </div>
     <ul class="py-4">
       <li>
@@ -41,7 +42,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../coders/getReserveCoders.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-regular fa-clock mr-2"></i>
           <span class="text-sm font-medium">Coders en reserva</span>
         </a>
@@ -55,7 +56,7 @@
           <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
           <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
           <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
-          <li><a href="./../staff/indexStaff.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
+          
         </ul>
       </li>
     </ul>
@@ -79,7 +80,7 @@
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-                <th scope="col" class="px-6 py-3">Id</th>
+                
                 <th scope="col" class="px-6 py-3">Nombre del Bootcamp</th>
                 <th scope="col" class="px-6 py-3">Empieza</th>
                 <th scope="col" class="px-6 py-3">Acaba</th>
@@ -104,7 +105,7 @@
 
             foreach ($result as $row) {
                 echo "<tr>"; 
-                echo "<td >" . $row["id"] . "</td>";
+                
                 echo "<td>" . $row["name_bootcamp"] . "</td>";
                 echo "<td>" . $row["start"] . "</td>";
                 echo "<td>" . $row["end"] . "</td>";
