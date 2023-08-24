@@ -27,8 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <link rel="stylesheet" href="./../../styles.css">
     <link rel="stylesheet" href="./../coders/addCoder.css">
     <link rel="stylesheet" href="./indexStaff.css">
-    
-
 </head>
 <body>
 <div class="w-full relative flex ct-docs-disable-sidebar-content overflow-x-hidden">
@@ -113,15 +111,9 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
            
         </tr>
        <?php 
- 
-       
         $staffList = new StaffController;
         $result = $staffList ->index();
         
-      //  use App\Controllers\StaffController;
-      //  require "./../../vendor/autoload.php";
-       
-       
         $bootcampMap = [
             0=> 'NO ASIGNADO',
             1=> 'SIN DEFINIR',

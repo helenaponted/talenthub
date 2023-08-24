@@ -136,6 +136,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
               </a>
               </div>
         </form>
+    </div>    
     </div>
 
    
@@ -143,17 +144,3 @@ require_once __DIR__ . '/../../vendor/autoload.php';
   </main>
  </body>
 </html>
-<?php
-
-
-   
-
-
-
-
-    
-
-
-
-
-?>
