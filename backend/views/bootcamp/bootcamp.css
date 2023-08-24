@@ -12,3 +12,14 @@
     text-decoration: underline;
     font-size: 12px;
 }
+.button-coders{
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+}

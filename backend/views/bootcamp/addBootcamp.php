@@ -97,7 +97,7 @@ require './../../vendor/autoload.php';
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
     <h2 class="text-2xl font-semibold mb-4">Alta de nuevo Bootcamp</h2>
         <form action="./addBootcamp.php" method="POST">
-            <label for="name_bootcamp" class="block font-semibold">Nombre</label>
+            <label for="name" class="block font-semibold">Nombre</label>
             <input type="text" name="name_bootcamp" class="form-input" required>
 
             <label for="start" class="block font-semibold">Empieza</label>

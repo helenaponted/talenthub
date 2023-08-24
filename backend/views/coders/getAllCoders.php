@@ -24,7 +24,7 @@
         </a>
       </li>
       <li class="group has-submenu">
-        <a href="./LandingPageBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../bootcamp/indexBootcamp.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-graduation-cap mr-2"></i>
           <span class="text-sm font-medium ">Bootcamps</span>
         </a>
