@@ -1,46 +1,26 @@
-<?php
-use App\Controllers\BootcampController;
-//require_once __DIR__ . './../../vendor/autoload.php';
-require './../../vendor/autoload.php';
-
- if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $data = [
-        'name_bootcamp' => $_POST["name_bootcamp"],
-        'start' => $_POST["start"],
-        'end' => $_POST["end"],
-        'remote' => $_POST["remote"],
-    ];
-
-    $bootcamp = new BootcampController;
-    $bootcamp->store($data);
-    header("Location: indexBootcamp.php");
-    exit();
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta de nuevo Bootcamp</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
     <link rel="stylesheet" href="./../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./../bootcamp/bootcamp.css">
     <link rel="stylesheet" href="./../coders/addCoder.css">
-    
-
-</head>
-<body>
-<aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talenthub</title>
+  </head>
+  <body>
+  <div class="w-full relative flex ct-docs-disable-sidebar-content overflow-x-hidden">
+  <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
     <div class="logo flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
       <img src="./../../../src/assets/logo-color.svg" alt="Logo" />
     </div>
     <ul class="py-4">
       <li>
-        <a href="./../landingPage/LandingPage.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./LandingPage.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-house mr-2"></i>
           <span class="text-sm font-medium ">Inicio</span>
         </a>
@@ -55,7 +35,7 @@ require './../../vendor/autoload.php';
           <li><a href="./../coders/indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
           <li><a href="./../coders/indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
           <li><a href="./../coders/indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
+          <li><a href="./../bootcamp/addBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
         </ul>
       </li>
       <li>
@@ -65,7 +45,7 @@ require './../../vendor/autoload.php';
         </a>
       </li>
       <li>
-        <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./../coders/getReserveCoders" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-regular fa-clock mr-2"></i>
           <span class="text-sm font-medium">Coders en reserva</span>
         </a>
@@ -76,53 +56,55 @@ require './../../vendor/autoload.php';
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
+          <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+          
         </ul>
       </li>
     </ul>
     <div class="px-4 py-2 mt-auto">
       <div class="flex items-center space-x-2 config">
-        <a href="#" class="text-gray-500 hover:text-orange-500">
+        <a href="./../../config.php" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-cog text-lg"></i>
         </a>
-        <a href="#" class="text-gray-500 hover:text-orange-500">
+        <a href="./../../index.php" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-sign-out-alt text-lg"></i>
         </a>
       </div>
     </div>
   </aside>
-  <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
-    <h2 class="text-2xl font-semibold mb-4">Alta de nuevo Bootcamp</h2>
-        <form action="./addBootcamp.php" method="POST">
-            <label for="name" class="block font-semibold">Nombre</label>
-            <input type="text" name="name_bootcamp" class="form-input" required>
-
-            <label for="start" class="block font-semibold">Empieza</label>
-            <input type="date" name="start" class="form-input" required>
-
-            <label for="end" class="block font-semibold">Acaba</label>
-            <input type="date" name="end" 7class="form-input" required>
-
-            <label for="remote" class="block font-semibold">¿Es Remoto?</label>
-            <select name="remote" class="form-select">
-                <option value="">-- Selecciona un Bootcamp --</option>
-                <option value=1>SIN DEFINIR</option>
-                <option value=2>REMOTO</option>
-                <option value=3>PRESENCIAL</option>           
-            </select>
-
-
-            <div class="text-center mt-6">
-                <button type="submit" name="submit" class="form-button">Registrar Bootcamp</button>
-            </div>
-        </form>
+</div>
+<div class="h-full ml-14 mt-14 mb-10 md:ml-64 sm:10">
+  <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5 " style="background-image: url(./../../../public/coders.jpg)">
+       <div class="md:w-1/2">
+        
+        <p class="text-3xl font-bold">CODERS</p>
+        <p class="text-2xl mb-10 leading-none">Gestión de Coders</p>
+        <a href="http://localhost/talenthub/backend/views/coders/getAllCoders.php" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
+        </div>
     </div>
+</br>
+    <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5" style="background-image: url(./../../../public/coding2.webp)">
+       <div class="md:w-1/2">
+        <p class="text-3xl font-bold">BOOTCAMPS</p>
+        <p class="text-2xl mb-10 leading-none">Gestión de Bootcamps</p>
+        <a href="http://localhost/talenthub/backend/views/landingPage/LandingPageBootcamp.php" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
+        </div>
+    </div>
+</br>
+<div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill m-5" style="background-image: url(./../../../public/staff.jpg)">
+       <div class="md:w-1/2">
+        <p class="text-3xl font-bold">STAFF</p>
+        <p class="text-2xl mb-10 leading-none">Gestión de Staff</p>
+        <a href="http://localhost/talenthub/backend/views/staff/indexStaff.php" class="bg-red-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">ACCESO</a>
+        </div>
+    </div>
+    
 
-    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
-    <div class="footerContainer px-6 py-8 mx-auto">
+    
+    <footer class="bg-transparent ">
+    <div class="container px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#">
                 <img class="w-auto h-7" src="./../../../public/LogoF5Footer.png" alt="">
@@ -141,10 +123,13 @@ require './../../vendor/autoload.php';
         </div>
     </div>
 </footer>
-    
-  </main>
-  
- 
-
-</body>
+</div>
+  </body>
 </html>
+
+
+
+
+
+
+

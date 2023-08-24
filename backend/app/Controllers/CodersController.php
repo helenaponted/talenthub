@@ -61,10 +61,10 @@ class CodersController {
     // PDO update con array, sin especificar todos los parametros posicionalmente
     // https://phpdelusions.net/pdo_examples/update
 
-    public function update($data){
-        $query= "UPDATE coders SET name_coder =:name_coder, surname1=:surname1, surname2=:surname2, email=:email, phone=:phone, city=:city WHERE id =:id";
+    public function update($data, $id){
+        $query= "UPDATE coders SET name_coder =?, surname1=?, surname2=?, email=?, phone=?, city=?, id_bootcamp=?, id_rol=? WHERE id =?";
         $stm = $this->connection->get_connection()->prepare($query);
-        $stm -> execute($data);
+        $stm->execute([$data['name_coder'],$data['surname1'],$data['surname2'],$data['email'],$data['phone'],$data['city'],$data['id_bootcamp'],$data['id_rol'], $id]);
 
     }
 
@@ -74,6 +74,14 @@ class CodersController {
         return $stm->execute($id);
 
     }
+
+    public function getFemCodersNorte()
+{
+    $query = "SELECT * FROM coders WHERE id_bootcamp = 2 and id_rol = 4"; 
+    $stm = $this->connection->get_connection()->prepare($query);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
     }
 
     ?>

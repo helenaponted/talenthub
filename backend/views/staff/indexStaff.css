@@ -1,0 +1,14 @@
+.titulo{
+    font-size: 35px;
+    text-align: center;
+    padding: 2%;
+    
+    
+}
+.buttonAddStaff{
+    justify-content: center;
+    text-align: center;
+}
+body{
+    margin-left: 3%;
+}

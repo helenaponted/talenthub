@@ -6,12 +6,12 @@
     <link rel="stylesheet" type="text/css" href="getAllCoders.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <link rel="stylesheet" href="./../../styles.css">
-    <link rel="stylesheet" href="./addCoder.css">
-    <title>CODERS</title>
+    <link rel="stylesheet" href="addCoder.css">
+    <title>DIGITAL ACADEMY</title>
 </head>
 <body>
-<div class="w-full relative flex ct-docs-disable-sidebar-content overflow-x-hidden">
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
     <div class="logo flex items-center justify-center h-20 shadow-md mt-6 bg-secondary">
       <img src="./../../../src/assets/logo-color.svg" alt="Logo" />
@@ -29,21 +29,21 @@
           <span class="text-sm font-medium ">Bootcamps</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="./../coders/indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
-          <li><a href="./../coders/indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
-          <li><a href="./../coders/indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
-          <li><a href="./../coders/indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
+          <li><a href="./indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
+          <li><a href="./indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
+          <li><a href="./indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
+          <li><a href="./indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
           <li><a href="./../bootcamp/addBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
         </ul>
       </li>
       <li>
-        <a href="./../coders/getAllCoders.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="./getAllCoders.php" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-solid fa-users mr-2"></i>
           <span class="text-sm font-medium">Todos los coders</span>
         </a>
       </li>
       <li>
-        <a href="./../coders/getReserveCoders" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
+        <a href="#" class="flex items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-orange-500 px-4 responsive-hidden">
           <i class="fa-regular fa-clock mr-2"></i>
           <span class="text-sm font-medium">Coders en reserva</span>
         </a>
@@ -58,27 +58,28 @@
           <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
           <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
           <li><a href="./../staff/indexStaff.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
-          
         </ul>
       </li>
     </ul>
     <div class="px-4 py-2 mt-auto">
       <div class="flex items-center space-x-2 config">
-        <a href="./../../config.php" class="text-gray-500 hover:text-orange-500">
+        <a href="#" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-cog text-lg"></i>
         </a>
-        <a href="./../../index.php" class="text-gray-500 hover:text-orange-500">
+        <a href="#" class="text-gray-500 hover:text-orange-500">
           <i class="fas fa-sign-out-alt text-lg"></i>
         </a>
       </div>
     </div>
   </aside>
-  </div>
-  <div class="h-full ml-14 mt-14 mb-10 md:ml-64 sm:10"> 
+  <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
 <div class="button-coders">
-    <h1>Listado de Coders</h1>
+    <h2>DIGITAL ACADEMY - Listado de coders</h2>
     <a href="./RPaddCoder.php">
         <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear nuevo coder</button>
+    </a>
+    <a href="./getAllCoders.php">
+        <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Añadir coder a este bootcamp</button>
     </a>
 </div>
     <div id="table" class="relative overflow-x-auto">
@@ -102,15 +103,8 @@
                     Telefono
                 </th> 
                 <th scope="col" class="px-6 py-3">
-                    Bootcamp
-                </th> 
-                <th scope="col" class="px-6 py-3">
-                    Estado
-                </th> 
-                <th scope="col" class="px-6 py-3">
                     Acciones
-                </th> 
-                
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -120,58 +114,28 @@
             require "./../../vendor/autoload.php";
 
             $codersController = new CodersController;
-
-            $bootcampMap = [
-                0=> 'NO ASIGNADO',
-                1=> 'SIN DEFINIR',
-                2 => 'FEMCODERS',
-                3 => 'DIGITAL ACADEMY',
-                4 => 'UNIQUE',
-                5 => 'RURAL CAMP'
-            ];
-            
-            $rolMap = [
-                0=>'SIN DEFINIR',
-                1 =>'RP',
-                2 => 'FORMADORA',
-                3 => 'CODER ASPIRANTE',
-                4 => 'CODER ADMITIDO',
-                5 => 'CODER EN RESERVA',
-                6 => 'EXCODER',
-                7 => 'EXCLUIDO'
-            ];
-            $result = $codersController -> getAll();
+            $result = $codersController -> getFemCodersNorte();
 
             foreach ($result as $row){
                 echo "<tr>";
+                
                 echo "<td>" .$row["name_coder"] . "</td>";
                 echo "<td>" .$row["surname1"] . "</td>";
                 echo "<td>" .$row["surname2"] . "</td>";
                 echo "<td>" .$row["email"] . "</td>";
                 echo "<td>" .$row["phone"] . "</td>";
-                echo "<td>" .$bootcampMap [$row["id_bootcamp"]] . "</td>";
-                echo "<td>" .$rolMap [$row["id_rol"]] . "</td>";
                 echo "<td>
                     <a href='editCoder.php?id=" . $row["id"] . "'>
                         <button type='button' class='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'>
-                        EDITAR
+                          EDITAR
                         </button>
                     </a>
                     
                     <a href='deleteCoder.php?id=" . $row["id"] . "'>
                         <button type='button' class='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900'>
-                        ELIMINAR
+                        BORRAR
                         </button>
                     </a>
-
-                    
-                    <a href='../coders_requirement/showCoders_requirement.php?id_coder=" . $row["id"] . "'>
-                    <button type='button' class='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900'>
-                    VER REQUISITOS
-                    </button>
-                </a>
-
-
                 </td>";
 
         echo "<td>";
@@ -181,10 +145,8 @@
             ?>
         </tbody>
     </table>
-    </div>
-      
-    <footer class="bg-transparent w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
-    <div class="container px-6 py-8 mx-auto">
+    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-1/2 fixed bottom-0">
+    <div class="footerContainer px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#">
                 <img class="w-auto h-7" src="./../../../public/LogoF5Footer.png" alt="">
@@ -203,6 +165,8 @@
         </div>
     </div>
 </footer>
+    
+  </main>
     
 </body>
 </html>

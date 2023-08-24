@@ -1,58 +1,15 @@
-<?php
-use App\Controllers\StaffController;
-require "./../../vendor/autoload.php";
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST["id"];
-    $newNameStaff = $_POST['name_staff'];
-    $newSurname1 = $_POST['surname1'];
-    $newSurname2 = $_POST['surname2'];
-    $newEmail = $_POST["email"];
-    $newId_rol = $_POST["id_rol"];
-    $newId_bootcamp = $_POST["id_bootcamp"];
-
-    $data = [
-        'name_staff' => $newNameStaff,
-        'surname1' => $newSurname1,
-        'surname2' => $newSurname2,
-        'email' => $newEmail,
-        'id_rol' => $newId_rol,
-        'id_bootcamp' => $newId_bootcamp
-    ];
-
-    $edit = new StaffController;
-    $edit->edit($id, $data);
-
-    
-} else {
-    $id = $_GET["id"];
-    $staffController = new StaffController();
-    $staffData = $staffController->show($id);
-    $newNameStaff = $staffData['name_staff'];
-    $newSurname1 = $staffData['surname1'];
-    $newSurname2 = $staffData['surname2'];
-    $newEmail = $staffData['email'];
-    $newId_rol = $staffData['id_rol'];
-    $newId_bootcamp = $staffData['id_bootcamp'];
-    
-}
-?>
-
-
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta de nuevo Bootcamp</title>
+    <link rel="stylesheet" type="text/css" href="getAllCoders.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <link rel="stylesheet" href="./../../styles.css">
-    <link rel="stylesheet" href="./../coders/addCoder.css">
-    
-
+    <link rel="stylesheet" href="addCoder.css">
+    <title>FEMCODERS NORTE</title>
 </head>
 <body>
 <aside class="w-56 bg-white h-screen fixed top-0 left-0 bottom-0 overflow-hidden border-r shadow-md">
@@ -73,11 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
           <li><a href="./indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Barcelona</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
+          <li><a href="./indexUniqueCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
+          <li><a href="./indexRuralCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
+          <li><a href="./indexDigitalCoders.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
+          <li><a href="./../bootcamp/addBootcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500"><i class="fa-solid fa-plus mr-2"></i>Añadir bootcamp</a></li>
         </ul>
       </li>
       <li>
@@ -98,10 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <span class="text-sm font-medium">Staff</span>
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
+          <li><a href="./../staff/getTrainers.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Formadoras</a></li>
+          <li><a href="./../staff/getCoformadora.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Coformadoras</a></li>
+          <li><a href="./../staff/getRP.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Responsables Proyecto</a></li>
+          <li><a href="./../staff/indexStaff.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Ver todo el staff</a></li>
         </ul>
       </li>
     </ul>
@@ -117,50 +73,78 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </aside>
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
-    <h2 class="text-2xl font-semibold mb-4">Edición Staff</h2>
-            <form action="./editStaff.php" method="POST">
+<div class="button-coders">
+    <h2>FEMCODERS NORTE - Listado de coders</h2>
+    <a href="./RPaddCoder.php">
+        <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Crear nuevo coder</button>
+    </a>
+    <a href="./getAllCoders.php">
+        <button  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Añadir coder a este bootcamp</button>
+    </a>
+</div>
+    <div id="table" class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                
+                <th scope="col" class="px-6 py-3">
+                    Nombre del coder
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Apellido 1
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Apellido 2
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Email
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Telefono
+                </th> 
+                <th scope="col" class="px-6 py-3">
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php 
 
-            <input class="w-full border rounded-lg py-2 px-3 mb-2" type="hidden" name="id" value="<?= $id ?>">
-            
-            <label for="name_staff" class="block font-semibold">Nombre</label>
-            <input type="text" name="name_staff" class="form-input" value="<?= $newNameStaff ?>"required>
+            use App\Controllers\CodersController;
+            require "./../../vendor/autoload.php";
 
-            <label for="surname1" class="block font-semibold">Apellido 1</label>
-            <input type="text" name="surname1" class="form-input" value="<?= $newSurname1 ?>" required>
+            $codersController = new CodersController;
+            $result = $codersController -> getFemCodersNorte();
 
-            <label for="surname2" class="block font-semibold">Apellido 2</label>
-            <input type="text" name="surname2" class="form-input" value="<?= $newSurname2 ?>"required>
+            foreach ($result as $row){
+                echo "<tr>";
+                
+                echo "<td>" .$row["name_coder"] . "</td>";
+                echo "<td>" .$row["surname1"] . "</td>";
+                echo "<td>" .$row["surname2"] . "</td>";
+                echo "<td>" .$row["email"] . "</td>";
+                echo "<td>" .$row["phone"] . "</td>";
+                echo "<td>
+                    <a href='editCoder.php?id=" . $row["id"] . "'>
+                        <button type='button' class='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'>
+                          EDITAR
+                        </button>
+                    </a>
+                    
+                    <a href='deleteCoder.php?id=" . $row["id"] . "'>
+                        <button type='button' class='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900'>
+                        BORRAR
+                        </button>
+                    </a>
+                </td>";
 
-            <label for="email" class="block font-semibold">Email</label>
-            <input type="text" name="email" class="form-input" value="<?= $newEmail ?>"required>
+        echo "<td>";
+        
+            }
 
-            <label for="id_rol" class="block font-semibold">Rol</label>
-            <select name="id_rol" class="form-select" value="<?= $newId_rol ?>">
-                <option value="">-- Selecciona Rol --</option>
-                <option value=0>sin definir</option>
-                <option value=1>RP</option>
-                <option value=2>FORMADORA</option>
-                <option value=8>CO-FORMADORA</option>           
-            </select>
-            <label for="id_bootcamp" class="block font-semibold">Bootcamp</label>
-            <select name="id_bootcamp" class="form-select" value="<?= $newId_bootcamp ?>">
-                <option value="">-- Selecciona BootCamp--</option>
-                <option value=1>SIN DEFINIR</option>
-                <option value=2>FEMCODERS NORTE</option>
-                <option value=3>DIGITAL ACADEMY</option>
-                <option value=4>UNIQUE</option>
-                <option value=5>RURAL CAMP</option>           
-            </select>
-
-
-            <div class="text-center mt-6">
-                <a href="./indexStaff.php">
-                <button type="submit" name="submit" class="form-button">Actualizar Staff</button>
-                </a>
-            </div>
-        </form>
-    </div>
-<!-- 
+            ?>
+        </tbody>
+    </table>
     <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
     <div class="footerContainer px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
@@ -180,10 +164,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
-</footer> -->
+</footer>
     
   </main>
- </body>
+    
+</body>
 </html>
-
-

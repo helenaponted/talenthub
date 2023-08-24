@@ -67,4 +67,28 @@ class StaffController {
         
     }
 
+    public function getTrainers()
+{
+    $query = "SELECT * FROM staff WHERE id_rol = 2"; 
+    $stm = $this->connection->get_connection()->prepare($query);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+public function getRP()
+{
+    $query = "SELECT * FROM staff WHERE id_rol = 1"; 
+    $stm = $this->connection->get_connection()->prepare($query);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+public function getCoformadora()
+{
+    $query = "SELECT * FROM staff WHERE id_rol = 8"; 
+    $stm = $this->connection->get_connection()->prepare($query);
+    $stm->execute();
+    return $stm->fetchAll(\PDO::FETCH_ASSOC);
+}
+
 }
