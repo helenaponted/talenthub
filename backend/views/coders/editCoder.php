@@ -143,6 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
     <h2 class="text-2xl font-semibold mb-4">Edición Coders</h2>
         <form action="./editCoder.php" method="POST">
+            <input type="hidden" name="id" value="<?= $id ?>">
             <label for="name_coder" class="block font-semibold">Nombre</label>
             <input type="text" name="name_coder" class="form-input" value="<?= $newNameCoder ?>"required>
 
@@ -155,9 +156,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="email" class="block font-semibold">Email</label>
             <input type="text" name="email" class="form-input" value="<?= $newEmail ?>"required>
             <label for="phone" class="block font-semibold">Telefono</label>
-            <input type="text" name="phonel" class="form-input" value="<?= $newPhone ?>"required>
-            <label for="ciudad" class="block font-semibold">Ciudad</label>
-            <input type="text" name="ciudad" class="form-input" value="<?= $newCity ?>"required>
+            <input type="text" name="phone" class="form-input" value="<?= $newPhone ?>"required>
+            <label for="city" class="block font-semibold">Ciudad</label>
+            <input type="text" name="city" class="form-input" value="<?= $newCity ?>"required>
 
             <label for="id_rol" class="block font-semibold">Rol</label>
             <select name="id_rol" class="form-select" value="<?= $newRol ?>">

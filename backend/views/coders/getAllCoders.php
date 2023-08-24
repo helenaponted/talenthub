@@ -122,6 +122,7 @@
             $codersController = new CodersController;
 
             $bootcampMap = [
+                0=> 'NO ASIGNADO',
                 1=> 'SIN DEFINIR',
                 2 => 'FEMCODERS',
                 3 => 'DIGITAL ACADEMY',
