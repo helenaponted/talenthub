@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         </a>
         <ul class="sub-menu ml-12 mt-2 space-y-1 bg-white border-l border-t border-b">
           <li><a href="./indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Norte</a></li>
-          <li><a href="./../coders/indexFemCodersNorte.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">FemCoders Barcelona</a></li>
+          
           <li><a href="./../coders/indexUnique.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Unique</a></li>
           <li><a href="./../coders/indexaddcodertobootcampruralcamp.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Rural Camp</a></li>
           <li><a href="./../coders/indexDigitalAcademy.php" class="block px-4 py-2 text-gray-500 hover:text-orange-500">Digital Academy</a></li>
