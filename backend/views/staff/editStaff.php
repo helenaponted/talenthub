@@ -35,8 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newEmail = $staffData['email'];
     $newId_rol = $staffData['id_rol'];
     $newId_bootcamp = $staffData['id_bootcamp'];
-    header("Location: indexStaff.php");
-    exit();
+    
 }
 ?>
 
@@ -119,7 +118,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </aside>
   <main class="h-full ml-14 mt-14 mb-10 md:ml-56 p-8  sm:10">
     <h2 class="text-2xl font-semibold mb-4">Edición Staff</h2>
-        <form action="./editStaff.php" method="POST">
+            <form action="./editStaff.php" method="POST">
+
+            <input class="w-full border rounded-lg py-2 px-3 mb-2" type="hidden" name="id" value="<?= $id ?>">
+            
             <label for="name_staff" class="block font-semibold">Nombre</label>
             <input type="text" name="name_staff" class="form-input" value="<?= $newNameStaff ?>"required>
 
@@ -140,8 +142,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <option value=2>FORMADORA</option>
                 <option value=8>CO-FORMADORA</option>           
             </select>
-            <label for="id_bootCamp" class="block font-semibold">Bootcamp</label>
-            <select name="id_bootCamp" class="form-select" value="<?= $newId_bootcamp ?>">
+            <label for="id_bootcamp" class="block font-semibold">Bootcamp</label>
+            <select name="id_bootcamp" class="form-select" value="<?= $newId_bootcamp ?>">
                 <option value="">-- Selecciona BootCamp--</option>
                 <option value=1>SIN DEFINIR</option>
                 <option value=2>FEMCODERS NORTE</option>
@@ -158,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </form>
     </div>
-
+<!-- 
     <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
     <div class="footerContainer px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
@@ -178,7 +180,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
     
   </main>
  </body>

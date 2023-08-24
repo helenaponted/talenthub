@@ -97,6 +97,7 @@
               0=>'SIN DEFINIR',
               1 =>'REMOTO',
               2 => 'PRESENCIAL',
+              "" => "",
            
           ];
             $result = $bootcampList->index();

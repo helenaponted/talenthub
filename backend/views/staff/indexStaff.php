@@ -113,14 +113,39 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
        
         $staffList = new StaffController;
         $result = $staffList ->index();
+        
+      //  use App\Controllers\StaffController;
+      //  require "./../../vendor/autoload.php";
+       
+       
+        $bootcampMap = [
+            0=> 'NO ASIGNADO',
+            1=> 'SIN DEFINIR',
+            2 => 'FEMCODERS',
+            3 => 'DIGITAL ACADEMY',
+            4 => 'UNIQUE',
+            5 => 'RURAL CAMP'
+        ];
+        
+        $rolMap = [
+            0=>'SIN DEFINIR',
+            1 =>'RP',
+            2 => 'FORMADORA',
+            3 => 'CODER ASPIRANTE',
+            4 => 'CODER ADMITIDO',
+            5 => 'CODER EN RESERVA',
+            6 => 'EXCODER',
+            7 => 'EXCLUIDO',
+            8 => 'CO-FORMADORA'
+        ];
             foreach ($result as $row) { ?>
                 <tr>
                     <td scope="col" class="px-6 py-3"><?php echo $row['name_staff']; ?></td>
                     <td scope="col" class="px-6 py-3"><?php echo $row['surname1']; ?></td>
                     <td scope="col" class="px-6 py-3"><?php echo $row['surname2']; ?></td>
                     <td scope="col" class="px-6 py-3"><?php echo $row['email']; ?></td>
-                    <td scope="col" class="px-6 py-3"><?php echo $row['id_rol']; ?></td>
-                    <td scope="col" class="px-6 py-3"><?php echo $row['id_bootcamp']; ?></td>
+                    <td scope="col" class="px-6 py-3"><?php echo $rolMap[$row['id_rol']]; ?></td>
+                    <td scope="col" class="px-6 py-3"><?php echo $bootcampMap[$row['id_bootcamp']]; ?></td>
                     <td>
                         
                         <a href="editStaff.php?id=<?php echo $row['id']; ?>" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 mb-2">Editar</a> 
@@ -132,7 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             </thead> 
     </table>
     </main>
-    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
+    <!-- <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
     <div class="footerContainer px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#">
@@ -151,6 +176,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 </body>
 </html>
