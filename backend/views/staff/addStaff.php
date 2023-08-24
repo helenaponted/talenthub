@@ -138,7 +138,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         </form>
     </div>
 
-    <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
+    <!-- <footer class="bg-transparent dark:bg-gray-900 w-9/12 md:w-4/6  sm:w-2/3 fixed bottom-0">
     <div class="footerContainer px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="#">
@@ -157,7 +157,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
     
   </main>
  </body>
