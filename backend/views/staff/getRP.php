@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
   <main class="ml-56 p-8">
     <h2 class="text-2xl font-semibold mb-4 text-secondary titulo">Lista de RP</h2>
     <a href="addStaff.php">
-        <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2 mb-2">CREAR</button>
+        <button class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 buttonAddStaff">Crear una RP</button>
     </a>
     <table id="codersTable" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">   
@@ -143,8 +143,8 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                     <td scope="col" class="px-6 py-3"><?php echo $bootcampMap[$row['id_bootcamp']]; ?></td>
                     <td>
                         
-                        <a href="editStaff.php?id=<?php echo $row['id']; ?>" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 mb-2">Editar</a> 
-                        <a href="deleteStaff.php?id=<?php echo $row['id']; ?>" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 mb-2">Eliminar</a> 
+                        <a href="editStaff.php?id=<?php echo $row['id']; ?>" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 mb-2">Editar</a> 
+                        <a href="deleteStaff.php?id=<?php echo $row['id']; ?>" class="text-white text-white bg-red-800 hover:bg-red-900 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-800 dark:hover:bg-red-700 dark:focus:ring-red-700 dark:border-red-700 font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 mb-2">Eliminar</a> 
                     </td>  
                 </tr>
                
