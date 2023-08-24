@@ -18,9 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $success = $codersController->updateBootcamp($id, $newBootcampValue);
 
         if ($success) {
-            echo "Se ha añadido a {$coderInfo['name_coder']} {$coderInfo['surname1']} {$coderInfo['surname2']} al bootcamp FemCoders." .  "<br>";
+            echo "Se ha añadido a {$coderInfo['name_coder']} {$coderInfo['surname1']} {$coderInfo['surname2']} al bootcamp Digital Academy." .  "<br>";
+            echo '<a href="./indexdigitalacademy.php">Volver al bootcamp</a>';
         } else {
             echo "Hubo un problema al actualizar el coder con ID $id";
+            
         }
     }
 }

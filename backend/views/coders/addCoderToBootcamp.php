@@ -19,6 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($success) {
             echo "Se ha añadido a {$coderInfo['name_coder']} {$coderInfo['surname1']} {$coderInfo['surname2']} al bootcamp FemCoders." .  "<br>";
+            echo '<a href="./indexfemcodersnorte.php">Volver al bootcamp</a>';
+            
         } else {
             echo "Hubo un problema al actualizar el coder con ID $id";
         }
