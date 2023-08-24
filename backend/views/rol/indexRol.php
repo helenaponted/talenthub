@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https:////cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <title>Roles</title>
 </head>
 <body>
@@ -10,7 +13,7 @@
     <a href="./addRol.php">
         <button>Crear nuevo rol</button>
     </a>
-    <table>
+    <table id="codersTable">
         <thead>
             <tr>
                 
@@ -52,5 +55,14 @@
             ?>
         </tbody>
     </table>
+    <script>
+    $(document).ready(function() {
+  $('#codersTable').DataTable();
+});
+
+
+
+
+</script>  
 </body>
 </html>

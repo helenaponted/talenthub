@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newId_bootcamp = $_POST["id_bootcamp"];
 
     $data = [
-      
         'name_staff' => $newNameStaff,
         'surname1' => $newSurname1,
         'surname2' => $newSurname2,
@@ -22,6 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'id_bootcamp' => $newId_bootcamp
     ];
 
+    $edit = new StaffController;
+    $edit->edit($id, $data);
 
     
 } else {
@@ -45,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta de nuevo Bootcamp</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -182,7 +184,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </footer> -->
     
   </main>
+  
  </body>
 </html>
-
-

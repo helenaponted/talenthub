@@ -20,6 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="indexStaff.css">
 <link rel="stylesheet" href="./../../styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https:////cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./../coders/addCoder.css">
 </head>
@@ -89,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <a href="addStaff.php">
         <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2 mb-2">CREAR</button>
     </a>
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table id="codersTable" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">   
     <tr>
         
@@ -143,5 +147,14 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             </thead> 
     </table>
             </main>
+            <script>
+    $(document).ready(function() {
+  $('#codersTable').DataTable();
+});
+
+
+
+
+</script>  
 </body>
 </html>
