@@ -104,7 +104,7 @@ require './../../vendor/autoload.php';
             <input type="date" name="start" class="form-input" required>
 
             <label for="end" class="block font-semibold">Acaba</label>
-            <input type="date" name="end" class="form-input" required>
+            <input type="date" name="end" 7class="form-input" required>
 
             <label for="remote" class="block font-semibold">¿Es Remoto?</label>
             <select name="remote" class="form-select">
